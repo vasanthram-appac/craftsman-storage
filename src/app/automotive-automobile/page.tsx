@@ -15,7 +15,7 @@ export default function AutomotiveAutomobile() {
       <main className="bg-[#EBF7FF]">
         <Header />
 
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto relative">
+        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] mx-auto relative z-index-[99]">
           <Breadcrumbs pageKey="automotive-automobile" />
         </div>
         <div className=" overflow-hidden">

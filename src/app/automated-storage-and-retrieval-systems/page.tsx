@@ -21,7 +21,7 @@ export default function ASRS() {
     <div>
       <main className="bg-[#EBF7FF] overflow-hidden">
         <Header />
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto relative">
+        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] mx-auto relative">
           <Breadcrumbs pageKey="automated-storage-and-retrieval-systems/" />
         </div>
         <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
