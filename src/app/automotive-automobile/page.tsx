@@ -12,15 +12,16 @@ export async function generateMetadata() {
 export default function AutomotiveAutomobile() {
   return (
     <div>
-      <main className="bg-[#EBF7FF] overflow-hidden">
+      <main className="bg-[#EBF7FF]">
         <Header />
 
         <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto relative">
           <Breadcrumbs pageKey="automotive-automobile" />
         </div>
+        <div className=" overflow-hidden">
         <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
           <Subbanner bannerKey="automotive-automobile" />
-        </div>
+        </div></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto">
           <AutomobileAutomotiveComponent />
         </div>
