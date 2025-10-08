@@ -30,5 +30,9 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Case Studies", href: "/" },
     { title: "Automobile Automotive", href: "/" },
   ],
+  "blog/": [
+    { title: "Home", href: "/" },
+    { title: "blog", href: "/" },
+  ],
 
 };

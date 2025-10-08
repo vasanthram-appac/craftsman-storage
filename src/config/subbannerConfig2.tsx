@@ -17,11 +17,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
   "pallet-asrs": {
     key: "pallet-asrs",
     title: "Automated Storage and Retrieval Systems",
-    subtitle: (
-      <>
-        Pallet ASRS
-      </>
-    ),
+    subtitle: <>Pallet ASRS</>,
     description:
       "Multi Deep Shuttle ASRS offers an automated storage solution to deliver and stack the products between the different pallet levels",
     mediaType: "video",
@@ -35,7 +31,6 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
       <>
         Automated Storage and
         <br /> Retrieval Systems
-
       </>
     ),
     description:
@@ -47,13 +42,18 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
   "automotive-automobile": {
     key: "automotive-automobile",
     title: "Automotive Automobile",
-    subtitle: (
-      <>
-        Automotive Automobile
-      </>
-    ),
+    subtitle: <>Automotive Automobile</>,
+    description: "Tractor Manufacturing Company",
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+  "blog/": {
+    key: "automotive-automobile",
+    title: "Blog",
+    subtitle: <>Blog</>,
     description:
-      "Tractor Manufacturing Company",
+      "We would like to keep you updated on the industrial front with regular blog postings.",
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
