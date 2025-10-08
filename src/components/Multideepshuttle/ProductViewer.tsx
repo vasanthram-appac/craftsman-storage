@@ -241,8 +241,8 @@ useEffect(() => {
       itemType="https://schema.org/Product"
     >
       {/* SEO meta (kept as in original) */}
-      <meta itemProp="name" content="iPhone 17 Pro" />
-      <meta itemProp="description" content="Explore the features of iPhone 17 Pro" />
+      <meta itemProp="name" content="Craftsman" />
+      <meta itemProp="description" content="Explore the features of Craftsman" />
 
       {/* Main viewer */}
       <div className="viewer-container relative w-full max-[580px]:h-[450px] max-[992px]:h-[600px] h-[800px]">

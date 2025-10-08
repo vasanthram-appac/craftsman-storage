@@ -71,53 +71,53 @@ export default function CaseLists() {
   const wrapperRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const slideWrappers = wrapperRefs.current;
-    const slides = gsap.utils.toArray<HTMLDivElement>(".Content__slide");
+  const slideWrappers = wrapperRefs.current;
+  const slides = gsap.utils.toArray<HTMLDivElement>(".Content__slide");
 
-    let mm = gsap.matchMedia();
+  const mm = gsap.matchMedia(); // ✅ use const
 
-    mm.add(
-      "(min-width: 1200px) and (prefers-reduced-motion: no-preference)",
-      () => {
-        slideWrappers.forEach((wrapper, i) => {
-          const card = slides[i];
+  mm.add(
+    "(min-width: 1200px) and (prefers-reduced-motion: no-preference)",
+    () => {
+      slideWrappers.forEach((wrapper, i) => {
+        const card = slides[i];
 
-          let scale = 1;
-          let rotationZ = 0;
-          let rotationX = 0;
+        let scale = 1;
+        let rotationZ = 0;
+        let rotationX = 0;
 
-          if (i !== slides.length - 1) {
-            scale = 0.4 + 0.025 * i;
-            rotationZ = 5;
-            rotationX = 40;
-          }
+        if (i !== slides.length - 1) {
+          scale = 0.4 + 0.025 * i;
+          rotationZ = 5;
+          rotationX = 40;
+        }
 
-          gsap.to(card, {
-  scale,
-  rotationX,
-  rotationZ,
-  transformOrigin: "50% center",
-  ease: "none",
-  scrollTrigger: {
-    trigger: wrapper,
-    start: "top top",
-    end: "bottom bottom",
-    endTrigger: slides[slides.length - 1],
-    scrub: 1,
-    pin: wrapper,
-    pinSpacing: false,
-    id: String(i + 1), // convert number to string
-  },
-});
-
+        gsap.to(card, {
+          scale,
+          rotationX,
+          rotationZ,
+          transformOrigin: "50% center",
+          ease: "none",
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top top",
+            end: "bottom bottom",
+            endTrigger: slides[slides.length - 1],
+            scrub: 1,
+            pin: wrapper,
+            pinSpacing: false,
+            id: String(i + 1),
+          },
         });
-      }
-    );
+      });
+    }
+  );
 
-    return () => {
-      mm.revert();
-    };
-  }, []);
+  return () => {
+    mm.revert();
+  };
+}, []);
+
 
   return (
     <div>

@@ -17,7 +17,7 @@ export async function generateMetadata() {
   return getMeta("/multi-deep-shuttle-asrs");
 }
 
-const iPhoneFeatures = [
+const Features = [
   {
     id: "ON/OFF Switch",
     title: "ON/OFF Switch",
@@ -172,7 +172,7 @@ export default function MDSA() {
         </div>
 
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto   ">
-          <ProductViewer features={iPhoneFeatures} initialFeature="colors" />
+          <ProductViewer features={Features} initialFeature="colors" />
         </div>
         <div className="rounded-[40px] w-[90%] md:w-[80%] max-w-[105rem] mx-auto   ">
           <AsrsPerform />
