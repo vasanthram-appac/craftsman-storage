@@ -24,11 +24,15 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Automated Storage", href: "/" },
     { title: "Pallet ASRS", href: "/" },
   ],
-
   "automotive-automobile": [
     { title: "Home", href: "/" },
     { title: "Case Studies", href: "/" },
     { title: "Automobile Automotive", href: "/" },
+  ],
+  "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
+    { title: "Home", href: "/" },
+    { title: "News and Events", href: "/" },
+    { title: "Craftsman Hosted Rishta Customer Meet in Ahmedabad", href: "/" },
   ],
   "blog/": [
     { title: "Home", href: "/" },
