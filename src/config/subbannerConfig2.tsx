@@ -58,4 +58,25 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
   },
+  "blog-detail/": {
+    key: "automotive-automobile",
+    title: "Blog",
+    subtitle: <>Blog</>,
+    description:
+      "We would like to keep you updated on the industrial front with regular blog postings.",
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+
+  "about-us": {
+    key: "",
+    title: "About us",
+    subtitle: <>About us</>,
+    description:
+      "We would like to keep you updated on the industrial front with regular blog postings.",
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
 };

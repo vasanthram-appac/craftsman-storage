@@ -11,14 +11,20 @@ theme: {
     extend: {
       keyframes: {
         gradientMove: {
-          '0%':   { backgroundPosition: '0% 50%' },
-          '50%':  { backgroundPosition: '100% 50%' },
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       animation: {
         gradientMove: 'gradientMove 4s ease infinite',
+        rotate: 'rotate 3s linear infinite',
       },
+       
     },
   },
 

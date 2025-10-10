@@ -6,7 +6,6 @@ export interface BreadcrumbItem {
 
 // Example: key is the page identifier
 export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
-
   "automated-storage-and-retrieval-systems/": [
     { title: "Home", href: "/" },
     { title: "Automated Storage", href: "/" },
@@ -16,7 +15,7 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Home", href: "/" },
     { title: "Automated Storage", href: "/" },
     { title: "Pallet ASRS", href: "/" },
-    { title: "Multi-deep Shuttle ASRS", href: "/" }
+    { title: "Multi-deep Shuttle ASRS", href: "/" },
   ],
 
   "pallet-asrs": [
@@ -38,5 +37,12 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Home", href: "/" },
     { title: "blog", href: "/" },
   ],
-
+  "blog-detail/": [
+    { title: "Home", href: "/" },
+    { title: "blog", href: "/" },
+  ],
+  "about-us/": [
+    { title: "Home", href: "/" },
+    { title: "About us", href: "/" },
+  ],
 };
