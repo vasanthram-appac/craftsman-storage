@@ -6,7 +6,6 @@ export interface BreadcrumbItem {
 
 // Example: key is the page identifier
 export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
-
   "automated-storage-and-retrieval-systems/": [
     { title: "Home", href: "/" },
     { title: "Automated Storage", href: "/" },
@@ -16,7 +15,7 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Home", href: "/" },
     { title: "Automated Storage", href: "/" },
     { title: "Pallet ASRS", href: "/" },
-    { title: "Multi-deep Shuttle ASRS", href: "/" }
+    { title: "Multi-deep Shuttle ASRS", href: "/" },
   ],
 
   "pallet-asrs": [
@@ -24,19 +23,26 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Automated Storage", href: "/" },
     { title: "Pallet ASRS", href: "/" },
   ],
-
   "automotive-automobile": [
     { title: "Home", href: "/" },
     { title: "Case Studies", href: "/" },
     { title: "Automobile Automotive", href: "/" },
   ],
+  "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
+    { title: "Home", href: "/" },
+    { title: "News and Events", href: "/" },
+    { title: "Craftsman Hosted Rishta Customer Meet in Ahmedabad", href: "/" },
+  ],
   "blog/": [
     { title: "Home", href: "/" },
     { title: "blog", href: "/" },
   ],
-   "about-us/": [
+  "blog-detail/": [
+    { title: "Home", href: "/" },
+    { title: "blog", href: "/" },
+  ],
+  "about-us/": [
     { title: "Home", href: "/" },
     { title: "About us", href: "/" },
   ],
-
 };
