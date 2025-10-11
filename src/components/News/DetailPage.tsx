@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ASSET_PREFIX } from "../../../config";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import NewsEventsSlider from "../home/NewsEvents";
+import RecentEvents from "./RecentEvents";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,15 +120,16 @@ export default function DetailPage() {
     <section className="w-[100%] sm:w-[95%] md:w-[85%] xl:w-[70%] mx-auto relative   ">
       {/* Event Content */}
       <div className="mb-10">
+
         <h2
           ref={headingRef}
           className="text-[24px] sm:text-[26px] md:text-[30px] 2xl:text-[36px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300] text-center will-change-transform"
         >
           Craftsman Hosted Rishta Customer Meet in Ahmedabad
-        </h2>
-        <p className="text-[15px] leading-[24px] text-center text-[#0087a7] bg-[#fff] rounded-[50px] px-[25px] py-[7px] w-fit mx-auto mt-[10px]">
+        </h2><p className="text-[15px] leading-[24px] text-center text-[#0087a7] rounded-[50px] px-[25px] py-[7px] w-fit mx-auto mt-[10px]">
           19 <sup>th</sup> Sep 2025
         </p>
+
       </div>
 
       {/* Event Image */}
@@ -185,6 +188,7 @@ export default function DetailPage() {
           />
         </div>
       )}
+      <RecentEvents />
     </section>
   );
 }

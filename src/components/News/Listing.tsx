@@ -94,7 +94,7 @@ export default function Listing() {
           return (
             <div
               key={ev.id}
-              className="event-card bg-white rounded-[15px] p-2.5 sm:p-5 group shadow-md transition-all hover:shadow-lg static w-full will-change-transform"
+              className="event-card bg-white rounded-[15px] p-2.5 sm:p-5 group shadow-md transition-all hover:shadow-lg static w-full will-change-transform group"
               style={{
                 opacity: visible ? 1 : 0,
                 position: visible ? "relative" : "absolute",
@@ -103,7 +103,7 @@ export default function Listing() {
               aria-hidden={!visible}
             >
               <div className="flex items-start gap-4 mb-4">
-                <p className="bg-[#198CB3] text-white text-[18px] leading-[24px] font-light w-fit min-w-[70px] flex flex-col items-center justify-center p-3 rounded-[20px]">
+                <p className="group-hover:bg-[#198CB3] transition duration-300 ease-in-out bg-[#363636] text-white text-[18px] leading-[24px] font-light w-fit min-w-[70px] flex flex-col items-center justify-center p-3 rounded-[20px]">
                   {ev.date.split(" ")[0]} <br /> {ev.date.split(" ")[1]}
                 </p>
                 <h4 className="text-[#232323] text-[18px] leading-[26px] font-[400] line-clamp-2">
@@ -120,7 +120,7 @@ export default function Listing() {
                   priority
                 />
                 <div className="absolute bottom-0 left-0">
-                  <Link href="#" className="bg-white text-[#FF8400] text-[16px] px-[15px] py-[8px] rounded-tr-[15px]">
+                  <Link href="#" className="bg-white group-hover:text-[#FF8400] transition duration-300 ease-in-out text-[#232323]  text-[16px] px-[15px] py-[8px] rounded-tr-[15px]">
                     Know More
                   </Link>
                 </div>
