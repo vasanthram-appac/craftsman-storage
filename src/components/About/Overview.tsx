@@ -44,7 +44,7 @@ export default function Overview() {
          
 
           {/* Header text */}
-          <div className="mb-[20px] md:mb-[40px] grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-[30px] ">
+          <div className="mb-[20px] md:mb-[40px] grid grid-cols-1 lg:grid-cols-2 justify-between items-center lg:gap-[30px] ">
             <div className=''>
 
                <h2 className="text-[#232323] mb-4 sm:mb-6 text-left">
