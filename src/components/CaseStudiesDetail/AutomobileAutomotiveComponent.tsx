@@ -21,10 +21,13 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
   };
 
   const data = {
-    title: "Automotive Industry",
+    banimg:
+      `${ASSET_PREFIX}/images/case-studies/automobile-problem-statement.webp`,
+    
+    title: "Automobile (Tractor Manufacturing Company)",
     intro: [
-      "Craftsman has fulfilled the storage needs of the world's leading equipment manufacturers of agricultural, construction, forestry and tractor automotive industries.",
-      "It's headquartered at Pune, & has manufacturing and services facilities across India.",
+      "An American corporation specializing in the production of agricultural machinery, heavy equipment, forestry machinery, diesel engines, drivetrains for heavy equipment, and lawn care equipment. Our contribution to their operations includes the supply of over 25 machines to date.",
+  
     ],
     problems: [
       "With the constantly growing range of articles handled by Farm Manufacturing company, the capacity of their manually operated store was virtually exhausted.",
@@ -33,18 +36,18 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
       "This result into miss match of stock and impact on productivity.",
     ],
     images: [
-      `${ASSET_PREFIX}/images/case-studies/dummy.webp`,
-      `${ASSET_PREFIX}/images/case-studies/dummy.webp`,
+      `${ASSET_PREFIX}/images/case-studies/tractor-manufaturing-problem.webp`,
+      `${ASSET_PREFIX}/images/case-studies/tractor-manufaturing-solutions.webp`,
     ],
     solutions: [
       "We installed a solution with which we could save valuable space and respond flexibly to future requirements.",
-      "First of all, the experts replaced the manually operated store with two Vstore. Because of the high total payload of each individual Vstore (up to 60 tons), these were installed in warehouse. This means the 8-meter-high Vstore use the full height of warehouse.",
-      "This has reduced the overall storage area from about 120 square meters to the footprint of the lifts, which is 20 square meters, thus freeing up valuable floor space.",
+      <>First of all, the experts replaced the manually operated store with two Vstore. Because of the high total payload of each individual Vstore (up to 60 tons), these were installed in warehouse. This means the 8-meter-high <Link href="#" className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300">Vstore</Link>  use the full height of warehouse.</>,
+      "This has reduced the overall storage area from about 120 square meters to the footprint of the lifts, which is 20 square meters, thus freeing up valuable floor space",
       "The time-consuming “man to goods” method of the manually operated warehouse has now been replaced by “goods to man” picking at the Vstore. As a result, picking errors have been reduced significantly.",
-      "The new inventory management in conjunction with the high-speed Vstore enables high transparency along with quick and reliable access to the articles.",
+      "The new inventory management in conjunction with the high-speed Vstore enables high transparency along with quick and reliable access to the articles",
     ],
     benefits:
-      "The modular technology of Vstore systems from CRAFTSMAN AUTOMATION enables faster product deliveries, improved stock control, minimized pick errors, efficient order picking and therefore shorter lead times.",
+      " Customer Feedback: The modular technology of Vstore systems from CRAFTSMAN AUTOMATION enables faster product deliveries, improved stock control, minimized pick errors, efficient order picking and therefore shorter lead times.",
   };
 
   const Bullet = () => (
@@ -126,7 +129,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         <section ref={addToRefs}>
           <div className="rounded-[25px] overflow-hidden flex mb-[40px] relative group mt-[-15px] flex">
             <Image
-              src={data.images[0]}
+              src={data.banimg}
               alt="Automotive warehouse solutions"
               width={900}
               height={400}
@@ -139,7 +142,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         {/* Intro */}
         <section ref={addToRefs}>
           <h2 itemProp="headline" className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
-            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]" >
+            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323]  mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]" >
             {data.title}
           </h2>
 
@@ -160,7 +163,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         {/* Problem Section */}
         <section ref={addToRefs}>
           <h2 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
-            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
+            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
             Problem Statement & Challenges Faced
           </h2>
 
@@ -247,7 +250,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         {/* Solution Section */}
         <section ref={addToRefs}>
           <h2 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
-            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
+            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
             The Solution
           </h2>
 
@@ -264,7 +267,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         {/* Benefits */}
         <section ref={addToRefs}>
           <h2 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
-            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
+            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
             Benefits to the Customer
           </h2>
 
