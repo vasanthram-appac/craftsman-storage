@@ -16,21 +16,21 @@ interface MenuItem {
 export default function QuickLinks() {
   const menus: MenuItem[] = [
     {
-      title: "Automated Storage and Retrieval Systems",
+      title: "",
       submenus: [
-        { title: "Pallet ASRS", href: "#" },
-        { title: "Miniload ASRS", href: "#" },
-        { title: "Warehouse Automation", href: "#" },
-        { title: "Cold Storage Automation", href: "#" },
-        { title: "Autonomous Mobile Robots (AMR)", href: "#" },
-        { title: "VStore Calculator", href: "#" },
+        { title: "Automotive Industry", href: "#" },
+        { title: "Cutting Tool Manufacturer", href: "#" },
+        { title: "Manufacturing", href: "#" },
+        { title: "Textile Industry", href: "#" },
+        { title: "E-Commerce ", href: "#" },
+        { title: "Logistics", href: "#" },
       ],
     },
 
   ];
 
   // Track active main menu for desktop
-  const [activeMenu, setActiveMenu] = useState<string>("Automated Storage and Retrieval Systems");
+  const [activeMenu, setActiveMenu] = useState<string>("");
 
   // Track open state for mobile accordion
   const [openMainAccordion, setOpenMainAccordion] = useState(false);

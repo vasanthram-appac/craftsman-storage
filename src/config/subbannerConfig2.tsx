@@ -4,7 +4,7 @@ export interface SubbannerItem {
   key: string;
   title: string;
   subtitle: React.ReactNode;
-  description?: string;
+  description?: React.ReactNode;
   mediaType: "video" | "image";
   mediaSrc: string;
   link?: {
@@ -18,8 +18,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "pallet-asrs",
     title: "Automated Storage and Retrieval Systems",
     subtitle: <>Pallet ASRS</>,
-    description:
-      "Multi Deep Shuttle ASRS offers an automated storage solution to deliver and stack the products between the different pallet levels",
+    description: <>Multi Deep Shuttle ASRS offers an automated storage solution <br />to deliver and stack the products between the <br />different pallet levels</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -30,11 +29,10 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     subtitle: (
       <>
         Automated Storage and
-        <br /> Retrieval Systems
+        <br className="hidden sm:block"/> Retrieval Systems
       </>
     ),
-    description:
-      "Storage solutions designed for Automated Storage and retrieval of palletized goods.",
+    description:<>Storage solutions designed for Automated Storage and <br />retrieval of palletized goods.</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -43,7 +41,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "automotive-automobile",
     title: "Automotive Automobile",
     subtitle: <>Automotive Automobile</>,
-    description: "Tractor Manufacturing Company",
+    description: <>Tractor Manufacturing Company</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -52,8 +50,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "automotive-automobile",
     title: "Blog",
     subtitle: <>Blog</>,
-    description:
-      "We would like to keep you updated on the industrial front with regular blog postings.",
+    description:<>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -62,8 +59,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "automotive-automobile",
     title: "Blog",
     subtitle: <>Blog</>,
-    description:
-      "We would like to keep you updated on the industrial front with regular blog postings.",
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -73,8 +69,34 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "",
     title: "About us",
     subtitle: <>About us</>,
-    description:
-      "We would like to keep you updated on the industrial front with regular blog postings.",
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+  "case-studies": {
+    key: "",
+    title: "Case Studies",
+    subtitle: <>Case Studies</>,
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+  "news-events": {
+    key: "",
+    title: "News & Events",
+    subtitle: <>News & Events</>,
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+  "contact-us": {
+    key: "",
+    title: "Contact Us",
+    subtitle: <>Contact Us</>,
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },

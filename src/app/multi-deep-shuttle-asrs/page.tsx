@@ -158,16 +158,16 @@ const Features = [
 export default function MDSA() {
   return (
     <div>
-      <main className="bg-[#EBF7FF]">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)]">
         <Header />
 
-        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] mx-auto relative">
+        <div className="mb-[50px]"><div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative z-index-[99] ">
           <Breadcrumbs pageKey="multi-deep-shuttle-asrs" />
-        </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
+        </div></div>
+        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem] mx-auto">
           <QuickLinks />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
+        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem] mx-auto">
           <PSubbanner page="multi-deep-shuttle-asrs" />
         </div>
 

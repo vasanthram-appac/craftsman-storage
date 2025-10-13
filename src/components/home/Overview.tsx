@@ -110,7 +110,7 @@ export default function Overview() {
                       /></div>
        <div className="absolute bottom-[-55px] sm:bottom-[-70px] md:bottom-[-80px] lg:bottom-[-105px] 2xl:bottom-[-120px] z-[0]">
 <p className="
-  bg-gradient-to-b from-[#ebf7ff] to-[#ebf7ff]
+  bg-gradient-to-b from-[#fff] to-[#fff]
   bg-clip-text text-transparent
   [-webkit-text-stroke-width:1px]
   [-webkit-text-stroke-color:#198cb333]

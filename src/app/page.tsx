@@ -23,7 +23,7 @@ const NewsEventsSlider = dynamic(() => import("@/components/home/NewsEvents"), {
 export default function Home() {
   return (
     <div >
-      <main className="bg-[#EBF7FF]">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)]">
         <Header />
 
         <div className="bg-[#vhF7FF] rounded-[40px_40px_0_0] overflow-hidden">

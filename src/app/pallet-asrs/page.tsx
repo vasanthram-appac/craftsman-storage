@@ -14,15 +14,15 @@ export async function generateMetadata() {
 export default function Services() {
   return (
     <div>
-      <main className="bg-[#EBF7FF] overflow-hidden">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)] overflow-hidden">
         <Header />
-        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] mx-auto relative">
+        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem]  mx-auto relative">
           <Breadcrumbs pageKey="pallet-asrs" />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
+        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem]  mx-auto">
           <Subbanner bannerKey="pallet-asrs" />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
+        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem]  mx-auto">
           <QuickLinks />
         </div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-[105rem] mx-auto">

@@ -28,7 +28,7 @@ export default function Breadcrumbs({ pageKey }: BreadcrumbsProps) {
               </Link>
             ) : (
               <span
-                className={`font-medium ${
+                className={`font-medium text-[16px] ${
                   isLast ? "text-[#0087A7]" : "text-gray-700"
                 }`}>
                 {crumb.title}

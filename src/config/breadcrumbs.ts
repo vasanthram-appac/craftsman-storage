@@ -30,7 +30,7 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
   ],
   "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
     { title: "Home", href: "/" },
-    { title: "News and Events", href: "/" },
+    { title: "News and Events", href: "/news-events" },
     { title: "Craftsman Hosted Rishta Customer Meet in Ahmedabad", href: "/" },
   ],
   "blog/": [
@@ -44,5 +44,17 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
   "about-us/": [
     { title: "Home", href: "/" },
     { title: "About us", href: "/" },
+  ],
+   "case-studies": [
+    { title: "Home", href: "/" },
+    { title: "case studies", href: "/" },
+  ],
+   "news-events": [
+    { title: "Home", href: "/" },
+    { title: "News & Events", href: "/" },
+  ],
+   "contact-us": [
+    { title: "Home", href: "/" },
+    { title: "Contact Us", href: "/" },
   ],
 };

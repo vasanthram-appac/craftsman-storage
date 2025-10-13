@@ -26,7 +26,7 @@ export default function PSubbanner({ page }: PSubbannerProps) {
   const { subtitle, heading, description, cta } = contents[index];
 
   return (
-    <section className="relative h-[350px] md:h-[400px] xl:h-[500px]">
+    <section className="relative h-[300px] md:h-[350px] xl:h-[450px]">
       {/* Background video with overlay */}
       <div className="absolute inset-0 rounded-[20px] sm:rounded-[45px] overflow-hidden z-[2]">
         <video

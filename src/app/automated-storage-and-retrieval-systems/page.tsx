@@ -19,12 +19,12 @@ export async function generateMetadata() {
 export default function ASRS() {
   return (
     <div>
-      <main className="bg-[#EBF7FF] overflow-hidden">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)] overflow-hidden">
         <Header />
-        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] mx-auto relative">
+        <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative">
           <Breadcrumbs pageKey="automated-storage-and-retrieval-systems/" />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto">
+        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto max-w-[105rem]">
           <Subbanner bannerKey="automated-storage-and-retrieval-systems" />
         </div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] ">

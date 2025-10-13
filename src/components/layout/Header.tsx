@@ -118,8 +118,8 @@ console.log(SetSubmenu);
     <header
       className={`header transition-colors duration-1000 ${
         isSticky
-          ? "sticky bg-[#EBF7FF] "
-          : "sticky bg-[#EBF7FF] "
+          ? "sticky bg-[#fff] "
+          : "sticky bg-[#fff] "
       } top-0 z-[10000]`}>
       <div
         className={`  mx-auto w-[95%] header-menu grid grid-cols-[235px_auto] sm:grid-cols-[330px_auto] justify-between m-auto items-center   ${
