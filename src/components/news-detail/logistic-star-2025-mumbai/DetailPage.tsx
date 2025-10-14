@@ -166,7 +166,7 @@ export default function DetailPage() {
       <div>
         <p className="text-[22px] leading-[30px] tracking-[-0.03em] font-[300] text-[#626262] text-center will-change-transform mt-[150px]"
         >
-          Our Senior VP & Business Head, Mr. Shakti Choube, joined an esteemed panel on "Navigating Robust Technologies for Warehouse Transformation" to share insights on how AI, robotics, and data are shaping the future of warehousing. As India’s warehousing ecosystem evolves, Craftsman continues to contribute toward building smart, scalable, and future-ready supply chains.
+          Our Senior VP & Business Head, Mr. Shakti Choube, joined an esteemed panel on &quot;Navigating Robust Technologies for Warehouse Transformation&quot; to share insights on how AI, robotics, and data are shaping the future of warehousing. As India’s warehousing ecosystem evolves, Craftsman continues to contribute toward building smart, scalable, and future-ready supply chains.
         </p>
       </div>
 
