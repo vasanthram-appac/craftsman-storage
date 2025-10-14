@@ -28,6 +28,16 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Case Studies", href: "/" },
     { title: "Automobile Automotive", href: "/" },
   ],
+  "auto-ancillary": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Auto Ancillary", href: "/" },
+  ],
+  "automotive-industry": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Automotive Industry", href: "/" },
+  ],
   "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
     { title: "Home", href: "/" },
     { title: "News and Events", href: "/news-events" },
