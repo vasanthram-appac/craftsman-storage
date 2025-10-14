@@ -57,4 +57,9 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Home", href: "/" },
     { title: "Contact Us", href: "/" },
   ],
+  "craftsman-hosts-rishta-customer-meet-in-bangalore": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Craftsman Hosts Rishta Customer Meet in Bangalore", href: "/" },
+  ],
 };

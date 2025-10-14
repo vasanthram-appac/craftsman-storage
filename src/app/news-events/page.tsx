@@ -12,7 +12,7 @@ export async function generateMetadata() {
 export default function NewsEvents() {
   return (
     <div>
-      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)]">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,#fff_100%)]">
         <Header />
 
         <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative z-index-[99]">

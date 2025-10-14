@@ -19,7 +19,7 @@ export async function generateMetadata() {
 export default function ASRS() {
   return (
     <div>
-      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,transparent_100%)] overflow-hidden">
+      <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,#fff_100%)] overflow-hidden">
         <Header />
         <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative">
           <Breadcrumbs pageKey="automated-storage-and-retrieval-systems/" />

@@ -21,10 +21,11 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
   };
 
   const data = {
+    title: "Automobile (Tractor Manufacturing Company)",
     banimg:
       `${ASSET_PREFIX}/images/case-studies/automobile-problem-statement.webp`,
     
-    title: "Automobile (Tractor Manufacturing Company)",
+    
     intro: [
       "An American corporation specializing in the production of agricultural machinery, heavy equipment, forestry machinery, diesel engines, drivetrains for heavy equipment, and lawn care equipment. Our contribution to their operations includes the supply of over 25 machines to date.",
   
@@ -127,7 +128,11 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
       <div>
         {/* Banner */}
         <section ref={addToRefs}>
-          <div className="rounded-[25px] overflow-hidden flex mb-[40px] relative group mt-[-15px] flex">
+            <h2 itemProp="headline" className="text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] 2xl:text-[34px]
+            leading-[30px] sm:leading-[32px]  lg:leading-[36px] xl:leading-[40px] 2xl:leading-[42px]  text-[#232323]  mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]" >
+            {data.title}
+          </h2>
+          <div className="rounded-[25px] overflow-hidden flex mb-[40px] relative group mt-[15px] flex">
             <Image
               src={data.banimg}
               alt="Automotive warehouse solutions"
@@ -141,10 +146,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
         {/* Intro */}
         <section ref={addToRefs}>
-          <h2 itemProp="headline" className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
-            leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323]  mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]" >
-            {data.title}
-          </h2>
+        
 
           {data.intro.map((para, i) => (
             <p
@@ -314,9 +316,9 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
           </Link>
         </div>
       <div
-  className="wave-bg absolute bottom-0 left-0 right-0 h-[200px] sm:h-[280px] md:h-[280px] 2xl:h-[290px] opacity-15 will-change-transform bg-repeat-x bg-bottom bg-cover"
+  className="wave-bg absolute bottom-0 left-0 right-0 h-[200px] sm:h-[280px] md:h-[280px] 2xl:h-[290px] opacity-[.8] will-change-transform bg-repeat-x bg-bottom bg-cover"
   style={{
-    backgroundImage: `url(${ASSET_PREFIX}/images/icons/bg-wave.svg)`,
+    backgroundImage: `url(${ASSET_PREFIX}/images/wave.png)`,
   }}
 ></div>
 
