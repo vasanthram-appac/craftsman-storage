@@ -84,9 +84,9 @@ export default function SubbannerNews({ bannerKey }: SubbannerProps) {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-[28px] sm:text-[34px] md:text-[42px] xl:text-[48px] font-semibold leading-[34px] sm:leading-[40px] md:leading-[48px] xl:leading-[50px] mb-[15px]">
+            <h1 className="text-[28px] sm:text-[34px] md:text-[42px] xl:text-[48px] font-semibold leading-[34px] sm:leading-[40px] md:leading-[48px] xl:leading-[50px] mb-[15px]">
               {banner.subtitle}
-            </span>
+            </h1>
             {banner.description && (
               <p className="text-[16px] sm:text-[18px] font-light max-w-[600px] mb-[25px] hidden md:block">
                 {banner.description}

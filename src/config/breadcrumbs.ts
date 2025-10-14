@@ -72,4 +72,30 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
      { title: "News and Events", href: "/news-events" },
     { title: "Craftsman Hosts Rishta Customer Meet in Bangalore", href: "/" },
   ],
+   "craftsman-storage-was-delighted-to-be-part-of-the-cii-institute-of-logistics-star-2025-summit-in-mumbai": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: " CII Institute of Logistics STAR 2025 ", href: "/" },
+  ],
+"craftsman-storage-hosted-the-customer-connect-in-hyderabad": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: " Customer Connect in Hyderabad ", href: "/" },
+  ],
+"craftsman-storage-exhibited-at-iws-expo-2025": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: " Craftsman Storage Exhibited at IWS Expo 2025 ", href: "/" },
+  ],
+"craftsman-storage-supported-nestles-new-logistics-centre-in-chennai": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: " Nestle's new Logistics center in Chennai ", href: "/" },
+  ],
+"fully-automated-warehouse-implementation": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Fully Automated Warehouse Implementation", href: "/" },
+  ],
+
 };
