@@ -1,18 +1,16 @@
 "use client";
 
-import { useRef } from "react";
-import { Swiper as SwiperType } from "swiper";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/pagination";
 import Image from "next/image";
 import Link from "next/link";
 import { ASSET_PREFIX } from "../../../config";
-import { useState } from "react";
-
-
-import "swiper/css";
-import "swiper/css/navigation";
 
 const events = [
   {
@@ -55,17 +53,18 @@ const events = [
 ];
 
 export default function RecentEvents() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const [activeIndex ] = useState(0);
+ const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-const swiperRef = useRef<SwiperType | null>(null);
+
+ const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="w-[90%] mx-auto">
 
 
       <div className=" flex flex-col md:flex-row justify-start md:justify-between item-start md:items-end gap-[20px] sm:gap-[30px] md:gap-[0] mb-[20px] lg:mb-[60px] ">
          <div className="">
-          <h2 className="text-[#232323] mb-4 sm:mb-6 text-left">- News & Events -</h2>
+          <h2 className="text-[#232323] mb-4 sm:mb-6 text-left">- Recent News & Events -</h2>
         <h3 className="text-[24px] leading-[28px] sm:text-[26px] sm:leading-[30px] md:text-[30px] md:leading-[36px] lg:text-[36px] lg:leading-[40px] xl:text-[40px] xl:leading-[46px] 2xl:text-[46px] 2xl:leading-[50px] font-semibold tracking-[-0.4px] mb-[0] opacity-100 text-[#000] text-left md:text-left w-[100%] sm:w-[70%] md:w-[80%] lg:w-[100%]"> <span className="bg-gradient-to-r from-[#232323] to-[#0086A6] bg-clip-text text-transparent tracking-[-2px]"> Widest range of  <br className="hidden lg:block" />customised solutions  </span> </h3>
          </div>
          <div className="flex justify-end w-full lg:w-auto"><Link href="" className="relative inline-flex items-center px-[2px] py-[2px] rounded-[50px] bg-gradient-to-r from-[#0087A7] via-[#FF8400] to-[#0087A7] bg-[length:300%_100%] animate-gradient shadow-lg   hover:shadow-orange-500/15 active:translate-y-0   transition-all duration-400 ease-out group">
@@ -80,29 +79,27 @@ const swiperRef = useRef<SwiperType | null>(null);
   </span>
 </Link></div>
     </div>
-
-
-
-
-
+    
       <Swiper
-  modules={[Navigation, Pagination]}
+ modules={[Navigation, Pagination, A11y]}
   onSwiper={(swiper) => (swiperRef.current = swiper)}
-  slidesPerView={1}
-  spaceBetween={20}
+          slidesPerView={1}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          spaceBetween={20}
   breakpoints={{
     0: { slidesPerView: 1 },
     767: { slidesPerView: 2 },
     1500: { slidesPerView: 2 },
   }}
-  onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} // <-- track current slide
-  onBeforeInit={(swiper) => {
-    if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
-      swiper.params.navigation.prevEl = prevRef.current as HTMLElement;
-      swiper.params.navigation.nextEl = nextRef.current as HTMLElement;
-    }
-  }}
-  navigation={{ enabled: true }}
+ pagination={{
+            el: ".custom-pagination",
+            clickable: true,
+          }}
+  loop={false}
+
   className="!pb-[10px]"
 >
         {events.map((ev) => (
@@ -139,35 +136,22 @@ const swiperRef = useRef<SwiperType | null>(null);
         ))}
       </Swiper>
       {/* Custom navigation */}
-      <div className="flex justify-center mt-8 gap-2">
-  {events.map((_, idx) => (
-    <button
-      key={idx}
-      onClick={() => swiperRef.current?.slideToLoop(idx)} // slideToLoop handles looping
-      className={`w-[8px] h-[8px] rounded-full transition-all duration-300 cursor-pointer ${
-        activeIndex === idx ? "bg-[#0086A6] w-[30px] rounded-[5px]" : "bg-gray-300"
-      }`}
-      aria-label={`Go to slide ${idx + 1}`}
-    ></button>
-  ))}
-</div>
+      <div className="flex justify-center mt-[40px] flex-wrap gap-[5px]">
+          <div className="custom-pagination !static swiper-pagination-bullets cpage "></div>
+        </div>
 
-      <div className="flex justify-end gap-3 mt-[15px] ">
-        <button
-          ref={prevRef}
-          aria-label="Previous"
-          className=" cursor-pointer p-[12px]"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6"></path></svg>
-        </button>
-        <button
-          ref={nextRef}
-          aria-label="Next"
-          className="cursor-pointer p-[12px]"
-        >
-         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"></path></svg>
-        </button>
-      </div>
+ <div className="flex justify-end gap-3 mt-[20px] w-[70%] mx-auto">
+             <button ref={prevRef} className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]" >
+              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
+            </svg>
+          </button>
+          <button ref={nextRef} className="custom-next cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]">
+              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6" />
+            </svg>
+          </button>
+        </div>
     </div>
   );
 }
