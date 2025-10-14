@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,7 +81,7 @@ export default function RecentEvents() {
     </div>
     
       <Swiper
- modules={[Navigation, Pagination, A11y]}
+ modules={[Navigation, Pagination, Autoplay , A11y]}
   onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}
           navigation={{
@@ -93,6 +93,10 @@ export default function RecentEvents() {
     0: { slidesPerView: 1 },
     767: { slidesPerView: 2 },
     1500: { slidesPerView: 2 },
+  }}
+   autoplay={{
+    delay: 3000, // 3 seconds between slides
+    disableOnInteraction: false, // Keeps autoplay running after manual navigation
   }}
  pagination={{
             el: ".custom-pagination",
@@ -140,7 +144,7 @@ export default function RecentEvents() {
           <div className="custom-pagination !static swiper-pagination-bullets cpage "></div>
         </div>
 
- <div className="flex justify-end gap-3 mt-[20px] w-[70%] mx-auto">
+ <div className="flex justify-end gap-3 mt-[20px]  mx-auto">
              <button ref={prevRef} className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]" >
               <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
