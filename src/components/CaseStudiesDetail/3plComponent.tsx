@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ConstructionMining() {
+export default function Threepl() {
   const Bullet = () => (
     <span className="min-w-[20px] w-[20px] h-[20px] flex items-center justify-center">
       <svg
@@ -36,92 +36,131 @@ export default function ConstructionMining() {
   };
 
   const data = {
-    title: "Construction & Mining Equipment Manufacturer",
-    banimg: `${ASSET_PREFIX}/images/case-studies/conventional-selective-pallet-racks.webp`,
+    title: "3PL",
+    banimg: `${ASSET_PREFIX}/images/case-studies/chain-01.webp`,
 
     intro: [
+      "Customer is a transportation, logistics, and warehousing company that offers comprehensive supply chain management solutions to its customers and was establishing a new warehouse for storage.",
+    ],
+    problems: [
       <>
         <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            The world&apos;s leading manufacturer of construction and mining
-            equipment, off-highway diesel, natural gas engines, industrial gas
-            turbines and diesel-electric locomotive.
+            <span>
+              The lead time was the crucial factor influencing business
+              decisions – quickly delivering product plays a significant role in
+              determining success and competitiveness.
+            </span>
           </li>
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            They do business on every continent, principally operating through
-            three primary segments - Construction Industries, Resource
-            Industries and Energy & transportation - and providing financing and
-            related services through their Financial Products segment.
+            <span>
+              Phase 1 of the project was completed by another party, but it
+              encountered issues with the design of MHE and pallet stoppers that
+              did not accommodate non-standard pallet sizes, affecting its
+              functionality.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              Therefore, securing the Phase 2 project will require a special
+              solution from us.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              Delivering the complete project in a shorter timeframe and at a
+              lower cost.
+            </span>
+          </li>
+        </ul>
+      </>,
+      ,
+    ],
+    specifications: [
+      <>
+        To address these issues, the company decided to implement a{" "}
+        <Link
+          href="/"
+          className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300 text-nowrap">
+          Selective Pallet Racking{" "}
+        </Link>{" "}
+        (SPR) system.
+        <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              The requirement was to store over 6,000 pallet positions, and this
+              solution provided increased storage capacity.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              The solution provided the customer with easy, direct access to
+              materials.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              We successfully completed the Phase 2 project, accommodating over
+              6,000 pallet positions in just 15 days.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              With this solution, the materials were sorted and organized on
+              designated racks.
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              The aisle space provided easy movement and access to the stored
+              materials.
+            </span>
           </li>
         </ul>
       </>,
     ],
-    problems: [
-      "Client was using conventional SPR racks since the beginning of their facility in 1970s.",
-      "Client did not have sufficient space in their warehouse to accommodate the growing material volumes. With conventional SPR racks, the volumetric utilization of warehouse facility was very low.",
-      "Picking efficiency was very poor as client was storing even smaller SKUs in pallets and they were retrieving entire pallet every time for picking even a small single qty of tiny SKU.",
-      "Since it is a working plant, they were forced to use maximum vacant land for building new assembly lines and retain the existing storage facilities and look out for improvements in storage methods.",
-    ],
     images: [
-      `${ASSET_PREFIX}/images/case-studies/utilization-of-warehouse-by-using-mobile-pallet-racking.webp`,
-      `${ASSET_PREFIX}/images/case-studies/benefits-of-using-mobile-pallet-racking-in-warehouse.webp`,
+      `${ASSET_PREFIX}/images/case-studies/chain-02.webp`,
+      `${ASSET_PREFIX}/images/case-studies/chain-03.webp`,
     ],
-    solutions: [
-      "We have studied their internal handling processes such as material receipt, LE qty segregation, binning, put-away, picking, line segregation, kitting and dispatch operations (Part number-wise) in detail.",
-      "Upon detailed study of part-wise SKUs, we understood client was underutilizing storage height & cubic space within each pallet resulting in overall loss of storage volume & performing multiple picks.",
-      "As FIFO & selectivity was mandatory, client was unable to convert conventional pallet racking system since many years.",
-      "To overcome above, we have segregated less than 8Kg unit weight part items based on their overall storage volume and proposed V-store for these part numbers (goods to man, instead of man to goods), thereby substantially reducing no. of pallets picked/handled.",
 
-      <>
-        For part numbers with more than 8Kg unit weight and LE quantities
-        ranging more than 1 pallet volume was allocated in{" "}
-        <Link
-          href="/"
-          className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300">
-          Pallet racks.
-        </Link>{" "}
-      </>,
-      "MPR was proposed to optimize the Cubic space utilization, while ensuring selectivity.",
-      "Picking efficiency improvements, WMS integration, Rack loading pattern, location allocation, Aisle light integration were proposed for overall operational efficiency of the warehouse",
-    ],
     benefits: (
       <>
         {/* Benefits to the customer */}
         <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            Increase in cubic space utilization of warehouse by using MPR &
-            V-store
+            <span>
+              This arrangement provided the customer with more storage space and
+              improved organization.
+            </span>
           </li>
           <li className="flex gap-[10px] items-start">
             <Bullet />
             <span>
-              For part numbers with more than 8Kg unit weight and LE quantities
-              ranging more than 1 pallet volume was allocated in{" "}
-              <Link
-                href="/"
-                className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300">
-                V-store
-              </Link>{" "}
-              (goods to man, earlier it was man to goods for picking even small
-              SKU)
+              The end customer and 3PL were able to start operations quickly,
+              that results in saving on operational costs and rental fees.
             </span>
           </li>
-
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            Part numbers handled as pallets reduced drastically and this
-            improved their location allocation in WMS
-          </li>
-          <li className="flex gap-[10px] items-start">
-            <Bullet />
-            V-store & MPR as a combined solution resulted in better cubic space
-            utilization for storage, optimized handling method for respective
-            part numbers, maximum utilization of storage locations.
+            <span>
+              The end customer was satisfied, and the relationship with the 3PL
+              strengthened.
+            </span>
           </li>
         </ul>
+        The solution tackled the storage problems while also enhancing safety
+        and efficiency within the organization.
       </>
     ),
   };
@@ -205,7 +244,7 @@ export default function ConstructionMining() {
         {/* Intro */}
         <section ref={addToRefs}>
           {data.intro.map((para, i) => (
-            <p
+            <div
               key={i}
               className={`${
                 i === 0
@@ -213,7 +252,7 @@ export default function ConstructionMining() {
                   : "mb-[30px] text-[17px]"
               } text-[#333]`}>
               {para}
-            </p>
+            </div>
           ))}
         </section>
 
@@ -222,17 +261,20 @@ export default function ConstructionMining() {
           <h2
             className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
-            Problem Statement & Challenges Faced
+            The Requirements
           </h2>
 
-          <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[60px]">
-            {data.problems.map((item, i) => (
-              <li key={i} className="flex gap-[10px] items-start">
-                <Bullet />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {data.problems.map((para, i) => (
+            <div
+              key={i}
+              className={`${
+                i === 0
+                  ? "mb-[15px] text-[16px] sm:text-[16px] leading-[1.5] sm:leading-[1.5] font-[400]"
+                  : "mb-[30px] text-[16px]"
+              } text-[#333]`}>
+              {para}
+            </div>
+          ))}
         </section>
 
         {/* Images */}
@@ -303,21 +345,25 @@ export default function ConstructionMining() {
             )}
           </AnimatePresence>
         </section>
-
-        {/* Solution Section */}
+        {/* Specification Section */}
         <section ref={addToRefs}>
           <h2
-            className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
+            className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
             The Solution
           </h2>
 
           <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[60px]">
-            {data.solutions.map((item, i) => (
-              <li key={i} className="flex gap-[10px] items-start">
-                <Bullet />
-                <span>{item}</span>
-              </li>
+            {data.specifications.map((para, i) => (
+              <div
+                key={i}
+                className={`${
+                  i === 0
+                    ? "mb-[15px] text-[16px] sm:text-[16px] leading-[1.5] sm:leading-[1.5] font-[400]"
+                    : "mb-[30px] text-[16px]"
+                } text-[#333]`}>
+                {para}
+              </div>
             ))}
           </ul>
         </section>
@@ -327,11 +373,11 @@ export default function ConstructionMining() {
           <h2
             className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
-            Benefits to the Customer
+            Benefits to the customer
           </h2>
 
           <div className="px-[20px] sm:px-[30px] py-[30px] sm:py-[40px] bg-[#fff] text-[18px] leading-[28px] text-[#232323] rounded-[20px] font-[500] tracking-[-0.02em] shadow-md shadow-[#0001]">
-            <p itemProp="description">{data.benefits}</p>
+            <div itemProp="description">{data.benefits}</div>
           </div>
         </section>
       </div>
