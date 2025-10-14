@@ -114,21 +114,21 @@ export default function IndustriesWeServe() {
       ],
     },
     {
-      title: "E–Commerce",
+      title: "E-Commerce",
       image: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
       description: "Creative, safe and supported environment.",
       caseStudies: [
-        { label: "Casestudy - E–Commerce", href: "" },
-        { label: "Casestudy - E–Commerce", href: "" },
+        { label: "Casestudy - E-Commerce", href: "" },
+        { label: "Casestudy - E-Commerce", href: "" },
       ],
     },
     {
-      title: "E–Commerce",
+      title: "E-Commerce",
       image: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
       description: "Creative, safe and supported environment.",
       caseStudies: [
-        { label: "Casestudy - E–Commerce", href: "" },
-        { label: "Casestudy - E–Commerce", href: "" },
+        { label: "Casestudy - E-Commerce", href: "" },
+        { label: "Casestudy - E-Commerce", href: "" },
       ],
     },
     {
