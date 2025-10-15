@@ -97,5 +97,60 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
      { title: "News and Events", href: "/news-events" },
     { title: "Fully Automated Warehouse Implementation", href: "/" },
   ],
+"craftsman-storage-received-appreciation-from-parekh-integrated-services": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Received Appreciation from Parekh Integrated Services", href: "/" },
+  ],
+"craftsman-storage-honored-by-merck-for-peenya-expansion-project": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Honored by Merck for Peenya Expansion Project", href: "/" },
+  ],
+"craftsman-storage-hosted-rishta-customer-meet-in-chennai": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "RISHTA Customer Meet in Chennai", href: "/" },
+  ],
+"craftsman-storage-exhibited-at-intralogistics-warehousing-expo-2025": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Intralogistics & Warehousing Expo 2025", href: "/" },
+  ],
+"craftsman-storage-hosted-a-meaningful-customer-meet-in-mumbai": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Customer Meet in Mumbai", href: "/" },
+  ],
+"design-discussion-with-nuit-suratkal-team": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Design discussion with NIT Suratkal Team", href: "/" },
+  ],
+"logimat-2025": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "LOGIMAT 2025", href: "/" },
+  ],
+"imtex-2025": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "IMTEX 2025", href: "/" },
+  ],
+"ludhiana-in-association-with-ate": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Customer meet at Ludhiana", href: "/" },
+  ],
+"craftsman-at-innovfest": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Craftsman at Innovfest", href: "/" },
+  ],
+"intralogistics-warehousing-expo-2024": [
+    { title: "Home", href: "/" },
+     { title: "News and Events", href: "/news-events" },
+    { title: "Intralogistics & Warehousing Expo 2024", href: "/" },
+  ],
 
 };

@@ -27,11 +27,9 @@ export default function DetailPage() {
   };
 
   const galleryImages = [
-    `${ASSET_PREFIX}/images/news/craftsman-storage-supported-nestles-new-logistics-centre-in-chennai-01.webp`,
-    `${ASSET_PREFIX}/images/news/craftsman-storage-supported-nestles-new-logistics-centre-in-chennai-02.webp`,
-    `${ASSET_PREFIX}/images/news/craftsman-storage-supported-nestles-new-logistics-centre-in-chennai-03.webp`,
-    
-    
+    ``,
+  
+      
   ];
 
   useEffect(() => {
@@ -138,12 +136,12 @@ export default function DetailPage() {
       <div className="mb-10">
 
         <p className="text-[15px] leading-[24px] text-center text-[#0087a7] rounded-[50px] px-[25px] py-[7px] w-fit mx-auto mt-[10px]">
-          12 <sup>th</sup> Sep 2025
+          28 <sup>th</sup> May 2025
         </p>
         <h2
           ref={headingRef}
           className="text-[24px] sm:text-[26px] md:text-[30px] 2xl:text-[36px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300] text-center will-change-transform"
-        >Craftsman Storage Supported Nestle’s New Logistics Centre in Chennai  </h2>
+        >Craftsman Storage Honored by Merck for Peenya Expansion Project </h2>
 
 
       </div>
@@ -154,8 +152,8 @@ export default function DetailPage() {
         className="relative will-change-transform rounded-[40px] mt-[100px] "
       >
         <Image
-          src={`${ASSET_PREFIX}/images/news/craftsman-storage-supported-nestles-new-logistics-centre-in-chennai-main.webp`}
-          alt="Nestle new Logistics center in Chennai"
+          src={`${ASSET_PREFIX}/images/news/craftsman-storage-honored-by-merck-for-peenya-expansion-project-detail.webp`}
+          alt="Honored by Merck for Peenya Expansion Project"
           width={1840}
           height={871}
           className="w-auto h-[180px] md:h-[250px] lg:h-[350px] mx-auto object-cover transition-transform duration-700 ease-out rounded-[25px] md:rounded-[40px]"
@@ -165,12 +163,13 @@ export default function DetailPage() {
       </div>
       <div>
         <p className="text-[22px] leading-[30px] tracking-[-0.03em] font-[300] text-[#626262] text-center will-change-transform mt-[150px]"
-        >
-          Nestle India recently inaugurated its new Logistics Capability Development Centre in Chennai, aimed at advancing warehousing and supply chain efficiencies. Craftsman Storage played a role in supporting this initiative with robust, space-optimised storage solutions tailored for high-performance logistics.
-        </p>
+        >A proud moment for Craftsman Storage as the company has been awarded a Certificate of Recognition by Merck for its key contribution to the Peenya Expansion Project.</p>
       </div>
 
       {/* Image gallery */}
+  
+     
+
       {galleryImages?.filter(img => img.trim() !== "").length > 0 && (
         <div className="">
         <h3 className="text-[20px] sm:text-[22px] md:text-[26px] 2xl:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300]  will-change-transform  mt-[30px] md:mt-[50px]">Gallery</h3>
