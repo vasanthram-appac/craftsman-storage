@@ -37,7 +37,7 @@ export default function FMCG() {
 
   const data = {
     title: "FMCG",
-    banimg: `${ASSET_PREFIX}/images/case-studies/challenge.webp`,
+    banimg: `${ASSET_PREFIX}/images/case-studies/fmcg-industry.webp`,
 
     intro: [
       "A Renowned FMCG MNC having its presence in India for more than 80 years and also across 190 countries is a manufacturer of multi brand consumer goods which also emphases toward making sustainable living a commonplace reality to everyone.",
@@ -85,8 +85,8 @@ export default function FMCG() {
       </>,
     ],
     images: [
-      `${ASSET_PREFIX}/images/case-studies/vstore-industrial-drives.webp`,
-      `${ASSET_PREFIX}/images/case-studies/vstore-industrial-drives-manufacturer.webp`,
+      `${ASSET_PREFIX}/images/case-studies/fmcg-storage-system-uses.webp`,
+      `${ASSET_PREFIX}/images/case-studies/fmcg-storage-system.webp`,
     ],
 
     benefits: (

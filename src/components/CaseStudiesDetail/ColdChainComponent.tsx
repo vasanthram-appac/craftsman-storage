@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ConstructionMining() {
+export default function ColdChain() {
   const Bullet = () => (
     <span className="min-w-[20px] w-[20px] h-[20px] flex items-center justify-center">
       <svg
@@ -36,90 +36,82 @@ export default function ConstructionMining() {
   };
 
   const data = {
-    title: "Construction & Mining Equipment Manufacturer",
-    banimg: `${ASSET_PREFIX}/images/case-studies/conventional-selective-pallet-racks.webp`,
+    title: "Cold Chain",
+    banimg: `${ASSET_PREFIX}/images/case-studies/manufacturing-industry.webp`,
 
     intro: [
-      <>
-        <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
-          <li className="flex gap-[10px] items-start">
-            <Bullet />
-            The world&apos;s leading manufacturer of construction and mining
-            equipment, off-highway diesel, natural gas engines, industrial gas
-            turbines and diesel-electric locomotive.
-          </li>
-          <li className="flex gap-[10px] items-start">
-            <Bullet />
-            They do business on every continent, principally operating through
-            three primary segments - Construction Industries, Resource
-            Industries and Energy & transportation - and providing financing and
-            related services through their Financial Products segment.
-          </li>
-        </ul>
-      </>,
+      "India’s leading exporters of Shrimp feeds & Probiotics for aquaculture originated from South India and exporting across Europe, America and Japan for more than 30 years. They are also one of the prominent exporters of sea meat like Shrimp, Squid, Cuttlefish & Crab. Their eminent processing and time-honored logistic techniques enabled them to cater with ease globally.",
     ],
     problems: [
-      "Client was using conventional SPR racks since the beginning of their facility in 1970s.",
-      "Client did not have sufficient space in their warehouse to accommodate the growing material volumes. With conventional SPR racks, the volumetric utilization of warehouse facility was very low.",
-      "Picking efficiency was very poor as client was storing even smaller SKUs in pallets and they were retrieving entire pallet every time for picking even a small single qty of tiny SKU.",
-      "Since it is a working plant, they were forced to use maximum vacant land for building new assembly lines and retain the existing storage facilities and look out for improvements in storage methods.",
+      "One of their Sea meat division was in an objective to expand their processing capacity so as to meet the rising demands from their buyers globally. This in turn brought them a necessity to improve the storage capacity as well as the handling methodology of the processed goods to handle about 100 tons (Palletized) of meat per day to be stuffed into five 40’ containers which will be replaced from the incoming production lines respectively. The requirement was to provide a storage structure to house 2,500 tons of processed meat designated to 6 cold rooms of size 290 sq.m each at -30°C.",
+      ,
     ],
-    images: [
-      `${ASSET_PREFIX}/images/case-studies/utilization-of-warehouse-by-using-mobile-pallet-racking.webp`,
-      `${ASSET_PREFIX}/images/case-studies/benefits-of-using-mobile-pallet-racking-in-warehouse.webp`,
-    ],
-    solutions: [
-      "We have studied their internal handling processes such as material receipt, LE qty segregation, binning, put-away, picking, line segregation, kitting and dispatch operations (Part number-wise) in detail.",
-      "Upon detailed study of part-wise SKUs, we understood client was underutilizing storage height & cubic space within each pallet resulting in overall loss of storage volume & performing multiple picks.",
-      "As FIFO & selectivity was mandatory, client was unable to convert conventional pallet racking system since many years.",
-      "To overcome above, we have segregated less than 8Kg unit weight part items based on their overall storage volume and proposed V-store for these part numbers (goods to man, instead of man to goods), thereby substantially reducing no. of pallets picked/handled.",
-
+    specifications: [
       <>
-        For part numbers with more than 8Kg unit weight and LE quantities
-        ranging more than 1 pallet volume was allocated in{" "}
-        <Link
-          href="/"
-          className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300">
-          Pallet racks.
-        </Link>{" "}
-      </>,
-      "MPR was proposed to optimize the Cubic space utilization, while ensuring selectivity.",
-      "Picking efficiency improvements, WMS integration, Rack loading pattern, location allocation, Aisle light integration were proposed for overall operational efficiency of the warehouse",
-    ],
-    benefits: (
-      <>
-        {/* Benefits to the customer */}
+        The specified cold room dimension thoroughly required higher cubic
+        footprint to store homogeneous goods in order to meet their capacity
+        requirement and the solution is as follows,
         <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            Increase in cubic space utilization of warehouse by using MPR &
-            V-store
+            <span>
+              Drive-In
+              <Link
+                href="/"
+                className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300 text-nowrap">
+                Pallet Racking System{" "}
+              </Link>{" "}
+              with 4 levels & 3 deep configuration with 2 blocks per room had
+              been offered to store and retrieve pallets following LIFO concept
+            </span>
           </li>
           <li className="flex gap-[10px] items-start">
             <Bullet />
             <span>
-              For part numbers with more than 8Kg unit weight and LE quantities
-              ranging more than 1 pallet volume was allocated in{" "}
-              <Link
-                href="/"
-                className="text-[#000] font-semibold hover:text-[#505050fa] transition-all duration-300">
-                V-store
-              </Link>{" "}
-              (goods to man, earlier it was man to goods for picking even small
-              SKU)
+              All the racking components including the bracings were powder
+              coated so as to endure the cold room temperature of -30°C
             </span>
           </li>
+        </ul>
+      </>,
+    ],
+    images: [
+      `${ASSET_PREFIX}/images/case-studies/manufacturing-system.webp`,
+      `${ASSET_PREFIX}/images/case-studies/manufacturing-storage-system.webp`,
+    ],
 
+    benefits: (
+      <>
+        {/* Benefits to the customer */}
+        Expected Storage capacity had been achieved by efficient space planning
+        and with the full utilization of vertical height (10m). Drive-In racking
+        enabled them a dimension of dense storage with minimum floor area
+        occupation. The denser storage solution enabled our client to have a
+        considerable savings and advantages in refrigeration consumption. The
+        increased efficiency and productivity of the cold room allowed our
+        client to stuff the expected number of 40’ containers in a day to meet
+        their global demand. <br />
+        Data and Key figures
+        <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[40px]">
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            Part numbers handled as pallets reduced drastically and this
-            improved their location allocation in WMS
+            <span>
+              Achieved pallet locations of 2200 nos vs expected 2100 nos
+            </span>
           </li>
           <li className="flex gap-[10px] items-start">
             <Bullet />
-            V-store & MPR as a combined solution resulted in better cubic space
-            utilization for storage, optimized handling method for respective
-            part numbers, maximum utilization of storage locations.
+            <span>
+              The racking area housed to about 2,600 MT of processed meat vs
+              expected 2,500 MT
+            </span>
+          </li>
+          <li className="flex gap-[10px] items-start">
+            <Bullet />
+            <span>
+              Effective storage area contribution of 50% from the overall 290
+              sq.m area per room
+            </span>
           </li>
         </ul>
       </>
@@ -205,7 +197,7 @@ export default function ConstructionMining() {
         {/* Intro */}
         <section ref={addToRefs}>
           {data.intro.map((para, i) => (
-            <p
+            <div
               key={i}
               className={`${
                 i === 0
@@ -213,7 +205,7 @@ export default function ConstructionMining() {
                   : "mb-[30px] text-[17px]"
               } text-[#333]`}>
               {para}
-            </p>
+            </div>
           ))}
         </section>
 
@@ -222,17 +214,20 @@ export default function ConstructionMining() {
           <h2
             className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
-            Problem Statement & Challenges Faced
+            The Requirements
           </h2>
 
-          <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[60px]">
-            {data.problems.map((item, i) => (
-              <li key={i} className="flex gap-[10px] items-start">
-                <Bullet />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {data.problems.map((para, i) => (
+            <div
+              key={i}
+              className={`${
+                i === 0
+                  ? "mb-[15px] text-[16px] sm:text-[16px] leading-[1.5] sm:leading-[1.5] font-[400]"
+                  : "mb-[30px] text-[16px]"
+              } text-[#333]`}>
+              {para}
+            </div>
+          ))}
         </section>
 
         {/* Images */}
@@ -303,21 +298,25 @@ export default function ConstructionMining() {
             )}
           </AnimatePresence>
         </section>
-
-        {/* Solution Section */}
+        {/* Specification Section */}
         <section ref={addToRefs}>
           <h2
-            className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
+            className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
             The Solution
           </h2>
 
           <ul className="grid gap-[15px] mt-[15px] text-[#232323] list-none mb-[60px]">
-            {data.solutions.map((item, i) => (
-              <li key={i} className="flex gap-[10px] items-start">
-                <Bullet />
-                <span>{item}</span>
-              </li>
+            {data.specifications.map((para, i) => (
+              <div
+                key={i}
+                className={`${
+                  i === 0
+                    ? "mb-[15px] text-[16px] sm:text-[16px] leading-[1.5] sm:leading-[1.5] font-[400]"
+                    : "mb-[30px] text-[16px]"
+                } text-[#333]`}>
+                {para}
+              </div>
             ))}
           </ul>
         </section>
@@ -327,11 +326,11 @@ export default function ConstructionMining() {
           <h2
             className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] 2xl:text-[30px] md:text-[36px]
             leading-[28px] sm:leading-[30px] lg:leading-[32px] xl:leading-[34px] 2xl:leading-[40px] text-[#232323] mt-[15px] sm:mt-[25px] mb-[15px] sm:mb-[20px] tracking-[-0.03em] font-[600]">
-            Benefits to the Customer
+            Benefits to the customer
           </h2>
 
           <div className="px-[20px] sm:px-[30px] py-[30px] sm:py-[40px] bg-[#fff] text-[18px] leading-[28px] text-[#232323] rounded-[20px] font-[500] tracking-[-0.02em] shadow-md shadow-[#0001]">
-            <p itemProp="description">{data.benefits}</p>
+            <div itemProp="description">{data.benefits}</div>
           </div>
         </section>
       </div>

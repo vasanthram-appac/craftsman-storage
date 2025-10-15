@@ -49,7 +49,7 @@ export default function CuttingToolManufacturer() {
             <Bullet />
             <span>
               A Dieset is a suitcase shaped box of size 350mm(D) x 275mm(W) x
-              100mm(H) & its Avg. weight is 10Kg's.
+              100mm(H) & its Avg. weight is 10Kg&apos;s.
             </span>
           </li>
           <li className="flex gap-[10px] items-start  text-[16px]  leading-[1.5] font-[400]!">

@@ -38,6 +38,31 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Case Studies", href: "/" },
     { title: "Automotive Industry", href: "/" },
   ],
+  "footwear-accessories-solution": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Footwear Accessories Solution", href: "/" },
+  ],
+  "manufacturing-solution": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Manufacturing", href: "/" },
+  ],
+  "cold-chain": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Cold Chain", href: "/" },
+  ],
+  "3pl": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "3pl", href: "/" },
+  ],
+  "ecommerce": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Ecommerce", href: "/" },
+  ],
   "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
     { title: "Home", href: "/" },
     { title: "News and Events", href: "/news-events" },
