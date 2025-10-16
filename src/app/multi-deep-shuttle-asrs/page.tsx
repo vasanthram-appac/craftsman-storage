@@ -161,17 +161,18 @@ export default function MDSA() {
       <main className="bg-[linear-gradient(360deg,#ebf7ff_50%,#fff_100%)]">
         <Header />
 
+
+        <div className=" rounded-[40px] pt-[0] w-[95%] max-w-[105rem] mx-auto">
+          <QuickLinks />
+        </div>
+        <div className=" rounded-[40px] pt-[10px] sm:pt-[10px] w-[95%] max-w-[105rem] mx-auto">
+          <PSubbanner page="multi-deep-shuttle-asrs" />
+        </div>
         <div className="mb-[50px]"><div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative z-index-[99] ">
           <Breadcrumbs pageKey="multi-deep-shuttle-asrs" />
         </div></div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem] mx-auto">
-          <QuickLinks />
-        </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem] mx-auto">
-          <PSubbanner page="multi-deep-shuttle-asrs" />
-        </div>
 
-        <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto   ">
+        <div className=" rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto   ">
           <ProductViewer features={Features} initialFeature="colors" />
         </div>
         <div className="rounded-[40px] w-[90%] md:w-[80%] max-w-[105rem] mx-auto   ">

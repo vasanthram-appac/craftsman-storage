@@ -14,7 +14,7 @@ export default function Breadcrumbs({ pageKey }: BreadcrumbsProps) {
   if (breadcrumbs.length === 0) return null;
 
   return (
-    <ul className="flex flex-wrap gap-[5px] text-sm absolute bottom-[-50px] left-[3%] z-[999]  max-[1200px]:w-[50%] max-[1000px]:w-[60%]  max-[900px]:w-[70%]  max-[760px]:w-[50%]  max-[760px]:bottom-[-50px] max-[600px]:w-[65%]  max-[480px]:relative max-[480px]:w-[100%]  max-[480px]:top-[0px]">
+    <ul className="flex flex-wrap gap-[5px] text-sm absolute bottom-[-35px] left-[3%] z-[999]  max-[1200px]:w-[50%] max-[1000px]:w-[60%]  max-[900px]:w-[70%]  max-[760px]:w-[50%]  max-[760px]:bottom-[-35px] max-[600px]:w-[65%]  max-[480px]:relative max-[480px]:w-[100%]  max-[480px]:top-[0px]">
       {breadcrumbs.map((crumb, index) => {
         const isLast = index === breadcrumbs.length - 1; // current page
 

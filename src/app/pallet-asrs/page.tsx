@@ -19,7 +19,7 @@ export default function Services() {
         <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem]  mx-auto relative">
           <Breadcrumbs pageKey="pallet-asrs" />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem]  mx-auto">
+        <div className=" rounded-[40px] w-[95%] max-w-[105rem]  mx-auto">
           <Subbanner bannerKey="pallet-asrs" />
         </div>
         <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem]  mx-auto">

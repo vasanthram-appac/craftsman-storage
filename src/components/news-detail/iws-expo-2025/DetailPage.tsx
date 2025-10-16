@@ -172,8 +172,9 @@ export default function DetailPage() {
       </div>
 
       {/* Image gallery */}
-      <h3 className="text-[20px] sm:text-[22px] md:text-[26px] 2xl:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300]  will-change-transform  mt-[30px] md:mt-[50px]">Gallery</h3>
-
+      {galleryImages?.filter(img => img.trim() !== "").length > 0 && (
+        <div className="">
+        <h3 className="text-[20px] sm:text-[22px] md:text-[26px] 2xl:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300]  will-change-transform  mt-[30px] md:mt-[50px]">Gallery</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px] mt-[30px]">
         {galleryImages.map((src, idx) => (
           <div key={idx} onClick={() => setSelectedImage(src)} className="cursor-pointer">
@@ -191,6 +192,8 @@ export default function DetailPage() {
 
 
       </div>
+      </div>
+      )}
 
       {/* Popup Modal with Animation */}
       <AnimatePresence>

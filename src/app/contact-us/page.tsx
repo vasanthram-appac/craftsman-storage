@@ -21,7 +21,7 @@ export default function Contact() {
                 <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem]  mx-auto relative">
                           <Breadcrumbs pageKey="contact-us" />
                         </div>
-                <div className=" rounded-[40px] pt-[20px] w-[95%] max-w-[105rem]  mx-auto">
+                <div className=" rounded-[40px] w-[95%] max-w-[105rem]  mx-auto">
                           <Subbanner bannerKey="contact-us" />
                         </div>
                 <div className="bg-[#vhF7FF] mt-[20px] rounded-[40px_40px_0_0] overflow-hidden !max-[600px]:pb-[0px] max-w-[120rem] m-auto">

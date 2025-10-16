@@ -160,7 +160,7 @@ export default function Benefits() {
 
 function BenefitCard({ title, description, image }: BenefitItem) {
   return (
-    <div className=" p-[25px] group">
+    <div className=" p-[25px] group hover:bg-[#fff] rounded-[20px] hover:shadow-lg transition-all duration-300 ease-in-out h-full flex flex-col items-start">
       <div className="mb-[25px]">
         <Image
           src={image}

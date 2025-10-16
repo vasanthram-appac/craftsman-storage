@@ -175,23 +175,29 @@ export default function DetailPage() {
       </div>
 
       {/* Image gallery */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px] mt-[50px]">
-        {galleryImages.map((src, idx) => (
-          <div key={idx} onClick={() => setSelectedImage(src)} className="cursor-pointer">
-            <Image
-              src={src}
-              alt={`Gallery image ${idx + 1}`}
-              width={1840}
-              height={871}
-              className="w-auto h-[250px] mx-auto object-cover transition-transform duration-700 ease-out rounded-[20px] hover:scale-105"
-              loading="lazy"
-              priority={false}
-            />
-          </div>
-        ))}
-
-
-      </div>
+     {galleryImages?.filter(img => img.trim() !== "").length > 0 && (
+             <div className="">
+             <h3 className="text-[20px] sm:text-[22px] md:text-[26px] 2xl:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] 2xl:leading-[42px] tracking-[-0.03em] font-[300]  will-change-transform  mt-[30px] md:mt-[50px]">Gallery</h3>
+           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px] mt-[30px]">
+             {galleryImages.map((src, idx) => (
+               <div key={idx} onClick={() => setSelectedImage(src)} className="cursor-pointer">
+                 <Image
+                   src={src}
+                   alt={`Gallery image ${idx + 1}`}
+                   width={1840}
+                   height={871}
+                   className="w-auto h-[250px] mx-auto object-cover transition-transform duration-700 ease-out rounded-[20px] hover:scale-105"
+                   loading="lazy"
+                   priority={false}
+                 />
+               </div>
+             ))}
+     
+     
+           </div>
+           </div>
+           )}
+     
 
       {/* Popup Modal with Animation */}
       <AnimatePresence>

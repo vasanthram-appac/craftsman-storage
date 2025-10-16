@@ -62,7 +62,7 @@ function FaqStatic({
               >
                 <div className="flex justify-between w-full items-center">
                   <h3
-                    className={` text-[18px] sm:leading-[22px]  sm:text-[20px] sm:leading-[26px] 2xl:text-[22px] 2xl:leading-[28px] font-semibold tracking-[-0.02em] text-left transition duration-300 text-[#232323] mb-[15px] ${
+                    className={` text-[18px] sm:leading-[22px]  sm:text-[20px] sm:leading-[26px] 2xl:text-[22px] 2xl:leading-[28px] font-semibold tracking-[-0.02em] text-left transition duration-300 text-[#232323] mb-[5px] ${
                       activeAccordion === item.id
                         ? "text-[#232323]"
                         : "group-hover:text-[#0087a7]"
@@ -98,7 +98,7 @@ function FaqStatic({
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
                   activeAccordion === item.id
-                    ? "max-h-[500px] opacity-100 mb-[15px]"
+                    ? "max-h-[500px] opacity-100 mb-[5px]"
                     : "max-h-0 opacity-0"
                 }`}
               >

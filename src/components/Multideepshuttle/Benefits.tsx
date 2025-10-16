@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
+import gsap from "gsap";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,7 +27,6 @@ export default function Benefits() {
     const prevRef = useRef<HTMLButtonElement | null>(null);
     const nextRef = useRef<HTMLButtonElement | null>(null);
 
-    const paginationRef = useRef<HTMLDivElement | null>(null);
 
   // detect screen resize
   useEffect(() => {
@@ -50,17 +50,47 @@ export default function Benefits() {
         [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#0087a7de]
         text-[30px] leading-[36px] md:text-[50px] md:leading-[54px]
         2xl:text-[70px] 2xl:leading-[70px]
-        relative z-[9999999] font-bold tracking-[0.03em]"
+        relative z-[999] font-bold tracking-[0.03em]"
       >
         {String(index + 1).padStart(2, "0")}
       </span>
       {benefit}
     </li>
   );
+ const [isBeginning, setIsBeginning] = useState(true);
+  const paginationRef = useRef<HTMLDivElement | null>(null);
+    const [isEnd, setIsEnd] = useState(false);
+     const swiperRef = useRef<any>(null);
+ // GSAP Fade + Scale + Blur Effect
+  const handleSlideTransition = () => {
+  if (!swiperRef.current) return;
+  const slides = swiperRef.current.slides;
 
+ slides.forEach((slide: HTMLElement, i: number) => {
+      if (i === swiperRef.current.activeIndex) {
+        // Incoming slide
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      } else {
+        // Outgoing slides
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 0.95,
+          filter: "blur(0)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+    });
+};
   return (
     <>
-      <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-[0] sm:gap-[30px]">
+      <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-start mb-[30px] md:mb-[0] md:items-end gap-[0] md:gap-[30px]">
         <div>
           <h2 className="text-[#232323] mb-[15px] md:mb-6">
             - Benefits & Features of using ASRS -
@@ -68,8 +98,8 @@ export default function Benefits() {
         </div>
 
         {/* Custom Navigation */}
-           <div className="flex justify-end gap-3 mt-[0] sm:mt-[20px] w-[70%] mr-[0] mx-auto ">
-             <button ref={prevRef} className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
+           <div className="flex justify-end gap-3 mt-[0] md:mt-[20px] w-[70%] mr-[0] mx-auto ">
+             <button ref={prevRef} className="custom-prev cursor-pointer p-[0] md:p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]" >
               <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
             </svg>
@@ -95,15 +125,27 @@ export default function Benefits() {
       {isMobile && (
         <div className="w-[90%] mx-auto relative">
           <Swiper
-            modules={[Navigation, Pagination]}
-            slidesPerView={1}
-            spaceBetween={20}
-            pagination={{ clickable: true }}
+          modules={[Autoplay, Navigation]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop
+            speed={800}
+            spaceBetween={30}
             navigation={{
-              nextEl: ".benefit-next",
-              prevEl: ".benefit-prev",
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
             }}
-            className="cpage !pb-[50px]"
+         onSwiper={(swiper) => {
+  swiperRef.current = swiper;
+  handleSlideTransition(); // animate all on load
+  swiper.on("slideChange", () => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+    handleSlideTransition(); // animate all on slide change
+  });
+}}
+ pagination={{ clickable: true, el: paginationRef.current }}
+            className="cpage !pb-[0]"
+
           >
             {benefitsData.map((benefit, index) => (
               <SwiperSlide key={index}>

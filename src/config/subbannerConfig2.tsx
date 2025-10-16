@@ -277,4 +277,16 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
   },
+
+
+  // Blog pages
+  "maximizing-efficiency-in-cold-storage-the-case-for-warehouse-automation": {
+    key: "",
+    title: "Our Blog",
+    subtitle: <>Our Blog</>,
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
 };

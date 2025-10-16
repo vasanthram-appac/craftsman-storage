@@ -18,10 +18,10 @@ export default function VisionMission() {
 
   return (
     <>
-   
+
 <div className="  ">
         <div className="w-full ">
-         
+
 
           {/* Header text */}
           <div className="mb-[20px] md:mb-[40px] grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-[20px] ">
@@ -30,15 +30,15 @@ export default function VisionMission() {
                <h2 className="text-[#fff] mb-4 sm:mb-10 text-left">
             - Vision -
           </h2>
-          <p className="text-white/90 text-[18px] leading:-[24px] sm:text-[20px] sm:leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[28px] lg:leading-[34px] 2xl:text-[34px] 2xl:leading-[42px] tracking-[-0.03em] font-light">
+          <p className="text-white/90 text-[18px] leading-[28px] sm:text-[20px] sm:leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[24px] lg:leading-[32px] 2xl:text-[28px] 2xl:leading-[38px] tracking-[-0.03em] font-[200]">
         To be a preferred Storage systems provider for diversified industry
         segments and to conceptualize, engineer, manufacture, and install
         effective storage solutions with a focus on quality, speed of execution
         and after sales support.
-      </p> 
+      </p>
       </div>
         <div className="absolute bottom-0 left-0 w-[220%] z-[0]">
-                   
+
                              <Image
                              src={`${ASSET_PREFIX}/images/icons/whyus-shape.svg`}
                              alt=""
@@ -55,7 +55,7 @@ export default function VisionMission() {
                <h2 className="text-[#fff] mb-4 sm:mb-10 text-left ">
             - Mission -
           </h2>
-           <p className="text-white/90 text-[18px] leading:-[24px] sm:text-[20px] sm:leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[28px] lg:leading-[34px] 2xl:text-[34px] 2xl:leading-[42px] tracking-[-0.03em] font-light ">
+           <p className="text-white/90 text-[18px] leading-[28px] sm:text-[20px] sm:leading-[26px] md:text-[24px] md:leading-[30px] lg:text-[24px] lg:leading-[32px] 2xl:text-[28px] 2xl:leading-[38px] tracking-[-0.03em] font-[200] ">
         To be a preferred Storage systems provider for diversified industry
         segments and to conceptualize, engineer, manufacture, and install
         effective storage solutions with a focus on quality, speed of execution
@@ -63,7 +63,7 @@ export default function VisionMission() {
       </p>
       </div>
          <div className="absolute bottom-0 left-[-100] w-[220%] z-[0]">
-                   
+
                              <Image
                              src={`${ASSET_PREFIX}/images/icons/whyus-shape.svg`}
                              alt=""
@@ -78,7 +78,7 @@ export default function VisionMission() {
           </div>
         </div>
       </div>
-     
+
     </>
   );
 }

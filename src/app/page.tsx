@@ -6,13 +6,13 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Leads from "@/components/Leads";
 import dynamic from "next/dynamic";
-import WhyUs from "@/components/home/WhyUs";
 import Products from "@/components/home/Products";
 import Overview from "@/components/home/Overview";
 import Casestudies from "@/components/home/Casestudies";
 import Blog from "@/components/home/Blog";
 import Industriesweserve from "@/components/home/Industriesweserve";
 import FaqStatic from "@/components/home/FaqStatic";
+import WhyUsTwo from "@/components/home/WhyUsTwo";
 
 export async function generateMetadata() {
   return getMeta("/");
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] overflow-hidden"><Overview /></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] bg-[#fff] rounded-[40px] max-w-[105rem] w-[95%] md:w-[80%]  mx-auto"><Products /></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] w-[90%] max-w-[105rem] mx-auto"><Industriesweserve /></div>
-        <div className="bg-[#00384A] rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto "><WhyUs /></div>
+        <div className="bg-[#00384A] rounded-[40px] w-[95%] md:w-[80%] max-w-[105rem] mx-auto "><WhyUsTwo /></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] w-[95%] max-w-[120rem] mx-auto"><Casestudies /></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] bg-[#fff] rounded-[40px] max-w-[105rem] w-[95%] md:w-[80%] mx-auto"><NewsEventsSlider /></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] w-[95%] max-w-[120rem] mx-auto"><Blog /></div>

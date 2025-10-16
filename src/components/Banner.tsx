@@ -46,10 +46,10 @@ export default function Banner() {
 
       {/* Banner content */}
       <div
-        className="absolute z-10 left-[0] sm:left-[20px] text-white p-0 sm:px-[50px] py-[40px] pb-[50px]
-        w-[88%] flex md:flex-row flex-col justify-between items-start md:items-end gap-0 md:gap-[50px]
+        className="absolute z-10 left-[0] sm:left-[20px] text-white px-[20px] py-[20px] sm:p-[50px]
+        w-full sm:w-[88%] flex md:flex-row flex-col justify-between items-start md:items-end gap-0 md:gap-[50px]
         text-black bg-no-repeat bg-[length:600px]
-        w-full p-[30px] md:p-[40px] bottom-[20px] rounded-[20px] sm:rounded-[40px]"
+        w-[96%] 2xl:w-full bottom-[20px] rounded-[20px] sm:rounded-[40px]"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -60,14 +60,18 @@ export default function Banner() {
             transition={{ duration: 0.8 }}
           >
             {/* <p className="text-[#fff] mb-[15px] font-semibold">Pallet ASRS</p> */}
-            <h1 className="text-[28px] leading-[32px] sm:text-[30px] sm:leading-[34px] md:text-[34px] md:leading-[40px] lg:text-[40px] lg:leading-[44px] xl:text-[44px] xl:leading-[48px] 2xl:text-[50px] 2xl:leading-[54px] font-semibold tracking-[-1px] mb-[35px] opacity-100 text-[#fff] ">
-              We design,<br className="hidden sm:block"  /> manufacture, <span className=" text-[#fff] tracking-[-2px] font-semibold"> supply <br className="hidden sm:block"/> and erect extensively <br className="hidden sm:block" /> engineered
+            <h1 className="text-[28px] leading-[32px] sm:text-[30px] sm:leading-[34px] md:text-[34px] md:leading-[40px] lg:text-[40px] lg:leading-[44px] xl:text-[44px] xl:leading-[48px] 2xl:text-[50px] 2xl:leading-[54px] font-semibold tracking-[-1px] mb-[25px] opacity-100 text-[#fff] ">
+              We design, manufacture,<br className="hidden sm:block" /> <span className=" text-[#fff] tracking-[-2px] font-semibold">  supply and erect extensively<br className="hidden sm:block"/>   engineered
               </span>
             </h1>
+            <p className="text-[16px] leading-[24px] font-light hidden sm:block">We design, manufacture, supply and erect extensively engineered <br className="hidden sm:block" /> racking solutions for your storage needs.</p>
              <div>
-            <div className= "flex flex-wrap items-center gap-[20px] sm:gap-[30px] mt-[30px] justify-end w-[100%] text-[#fff]">
+            <div className= "flex flex-wrap items-center gap-[10px] sm:gap-[30px] mt-[30px] justify-end w-[100%] text-[#fff]">
               <BannerLink href="/about-us">Know More</BannerLink>
-            </div></div>
+              <BannerLink href="/about-us">Get a Quote</BannerLink>
+            </div>
+
+            </div>
           </motion.div>
         </AnimatePresence>
 
@@ -106,7 +110,7 @@ function BannerLink({ href, children }: { href: string; children: React.ReactNod
   className="inline-flex items-center gap-[5px] text-[16px] font-normal hover:opacity-80 transition group overflow-hidden rounded-full"
 >
   <div className="relative p-[12.5px] rounded-full flex items-center justify-center
-                  before:content-[''] before:absolute before:left-0 before:top-0 before:w-[40px] before:h-[40px] before:bg-black before:rounded-full before:transition-transform before:duration-500 before:ease-in-out group-hover:before:scale-[6.25]">
+                  before:content-[''] before:absolute before:left-0 before:top-0 before:w-[40px] before:h-[40px] before:bg-[#0087a7] before:rounded-full before:transition-transform before:duration-500 before:ease-in-out group-hover:before:scale-[6.25]">
     <ArrowIcon />
   </div>
   <span className="relative z-[99] opacity-80 group-hover:opacity-100 group-hover:scale-[1] transition duration-300 ease-in-out pr-[15px] ">{children}</span>

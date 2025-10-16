@@ -182,7 +182,7 @@ export default function KeyActivities() {
 
 function BenefitCard({ title, description, image }: BenefitItem) {
   return (
-    <div className=" p-[10px] sm:p-[25px] group">
+    <div className=" p-[10px] sm:p-[25px] group hover:bg-[#002c3b1a] rounded-[20px] transition duration-300 ease-in-out  ">
       <div className="mb-[25px]">
         <Image
           src={image}
