@@ -62,4 +62,12 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
      { title: "News and Events", href: "/news-events" },
     { title: "Craftsman Hosts Rishta Customer Meet in Bangalore", href: "/" },
   ],
+
+
+  // blog starts
+  "maximizing-efficiency-in-cold-storage-the-case-for-warehouse-automation": [
+    { title: "Home", href: "/" },
+     { title: "Blog", href: "/blog" },
+    { title: "Maximizing Efficiency in Cold Storage: The Case for Warehouse Automation", href: "/maximizing-efficiency-in-cold-storage-the-case-for-warehouse-automation/" },
+  ],
 };

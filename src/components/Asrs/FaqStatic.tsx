@@ -34,7 +34,7 @@ function FaqStatic({
     <div className="solution grid grid-cols-[100%] lg:grid-cols-[35%_60%] xl:grid-cols-[40%_55%] justify-between gap-[30px] md:gap-[50px] items-start w-[90%] mx-auto">
       {/* Section Title */}
       <div className="h-full">
-      <div className="">
+      <div className="sticky top-[200px]">
           <h2 className="text-[#232323] mb-4 sm:mb-6 text-left">
            - FAQ -
           </h2>
@@ -52,7 +52,7 @@ function FaqStatic({
           {accordionItems.map((item) => (
             <div
               key={item.id}
-              className={` bg-[#fff] px-[15px] sm:px-[25px]  p-[10px] sm:p-[20px] rounded-[20px] group transition-all duration-300 ${
+              className={` bg-[#fff] px-[15px] sm:px-[25px] sm:pb-[0] p-[10px] sm:p-[20px] rounded-[20px] group transition-all duration-300 ${
                 activeAccordion === item.id ? "active" : ""
               }`}
             >
@@ -71,7 +71,7 @@ function FaqStatic({
                     {item.title}
                   </h3>
                   <div
-                    className={`rounded-full p-[8px] border border-[#fff] transition duration-300 w-[32px] h-[32px] sm:w-[38px] sm:h-[38px]  flex items-center justify-center ${
+                    className={`rounded-full p-[0px] border border-[#fff] transition duration-300 w-[32px] h-[32px] sm:w-[38px] sm:h-[38px]  flex items-start justify-end ${
                       activeAccordion === item.id
                         ? ""
                         : " "
@@ -98,11 +98,11 @@ function FaqStatic({
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
                   activeAccordion === item.id
-                    ? "max-h-[500px] opacity-100 mb-[15px]"
+                    ? "max-h-[500px] opacity-100 mb-[5px]"
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="font-normal text-[#37384D] tracking-[-0.03em] text-[16px] leading-[24px] w-[100%] sm:w-[90%] md:w-[80%]">
+                <p className="font-normal mb-[15px] text-[#37384D] tracking-[-0.03em] text-[16px] leading-[24px] w-[100%] sm:w-[90%] md:w-[80%]">
                   {item.content}
                 </p>
               </div>

@@ -24,9 +24,10 @@ export default function ASRS() {
         <div className=" rounded-[40px] max-[480px]:pt-[20px] w-[95%] max-w-[105rem] mx-auto relative">
           <Breadcrumbs pageKey="automated-storage-and-retrieval-systems/" />
         </div>
-        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto max-w-[105rem]">
+        <div className=" overflow-hidden">
+        <div className=" rounded-[40px] pt-[20px] w-[95%] mx-auto ">
           <Subbanner bannerKey="automated-storage-and-retrieval-systems" />
-        </div>
+        </div></div>
         <div className="py-[50px] sm:py-[60px] md:py-[70px] lg:py-[80px] xl:py-[90px] 2xl:py-[100px] rounded-[40px] ">
           <Overview />
         </div>

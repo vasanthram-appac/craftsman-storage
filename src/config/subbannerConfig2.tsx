@@ -18,7 +18,7 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "pallet-asrs",
     title: "Automated Storage and Retrieval Systems",
     subtitle: <>Pallet ASRS</>,
-    description: <>Multi Deep Shuttle ASRS offers an automated storage solution <br />to deliver and stack the products between the <br />different pallet levels</>,
+    description: <>Multi Deep Shuttle ASRS offers an automated <br />storage solution to deliver </>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",
     link: { label: "Know More", href: "/contact" },
@@ -96,6 +96,18 @@ export const subbannerConfig2: Record<string, SubbannerItem> = {
     key: "",
     title: "Contact Us",
     subtitle: <>Contact Us</>,
+    description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
+    mediaType: "video",
+    mediaSrc: "/videos/craftsman-video-new.mp4",
+    link: { label: "Know More", href: "/contact" },
+  },
+
+
+  // Blog pages
+  "maximizing-efficiency-in-cold-storage-the-case-for-warehouse-automation": {
+    key: "",
+    title: "Our Blog",
+    subtitle: <>Our Blog</>,
     description: <>We would like to keep you updated on the industrial <br />front with regular blog postings.</>,
     mediaType: "video",
     mediaSrc: "/videos/craftsman-video-new.mp4",

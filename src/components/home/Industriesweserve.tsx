@@ -1,15 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
-import { Swiper as SwiperType } from "swiper";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ASSET_PREFIX } from "../../../config";
-
+import gsap from "gsap";
 interface CaseStudy {
   label: string;
   href: string;
@@ -237,7 +236,37 @@ export default function IndustriesWeServe() {
   );
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
-  const swiperRef = useRef<SwiperType | null>(null);
+  // const swiperRef = useRef<SwiperType | null>(null);
+  const swiperRef = useRef<any>(null);
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+   // GSAP Fade + Scale + Blur Effect
+  const handleSlideTransition = () => {
+  if (!swiperRef.current) return;
+  const slides = swiperRef.current.slides;
+
+ slides.forEach((slide: HTMLElement, i: number) => {
+      if (i === swiperRef.current.activeIndex) {
+        // Incoming slide
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      } else {
+        // Outgoing slides
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 0.95,
+          filter: "blur(0)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+    });
+};
   return (
     <>
       {/* Heading */}
@@ -268,18 +297,26 @@ export default function IndustriesWeServe() {
       {/* Single Swiper for all sizes */}
       <div className="relative mx-auto mt-[30px] md:mt-[60px] w-full md:w-[90%]">
         <Swiper
-          modules={[Navigation, Pagination]}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
-          }}
-          pagination={{
-            el: ".custom-pagination",
-            clickable: true,
-          }}
-          loop={true}
-          spaceBetween={20}
+          modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop
+            speed={800}
+            spaceBetween={30}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+         onSwiper={(swiper) => {
+  swiperRef.current = swiper;
+  handleSlideTransition(); // animate all on load
+  swiper.on("slideChange", () => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+    handleSlideTransition(); // animate all on slide change
+  });
+}}
+
+
           breakpoints={{
             0: { slidesPerView: 1, centeredSlides: true },
             600: { slidesPerView: 2, centeredSlides: false, spaceBetween: 20 },
@@ -296,21 +333,63 @@ export default function IndustriesWeServe() {
 
         {/* Custom Navigation */}
 
-        <div className="flex justify-center mt-[40px] flex-wrap gap-[5px]">
+        {/* <div className="flex justify-center mt-[40px] flex-wrap gap-[5px]">
           <div className="custom-pagination !static swiper-pagination-bullets cpage "></div>
-        </div>
-        <div className="flex justify-end gap-3 mt-[20px]">
-          <button ref={prevRef} className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]" >
-              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
-            </svg>
-          </button>
-          <button ref={nextRef} className="custom-next cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]">
-              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6" />
-            </svg>
-          </button>
-        </div>
+        </div> */}
+        <div className="absolute bottom-[-45px] md:bottom-[-70px] right-[5%] md:right-auto w-[100%] mx-auto justify-end z-[50] flex gap-[10px]">
+            {/* Prev */}
+            <button
+              ref={prevRef}
+              disabled={isBeginning}
+              className={`custom-prev cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md transition-all duration-300 ${
+                isBeginning
+                  ? "bg-[#ccc] opacity-40 cursor-default"
+                  : "bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83]"
+              }`}
+              aria-label="Previous"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6"
+                />
+              </svg>
+            </button>
+
+            {/* Next */}
+            <button
+              ref={nextRef}
+              className="custom-next cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83] transition-all duration-300"
+              aria-label="Next"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"
+                />
+              </svg>
+            </button>
+          </div>
 
       </div>
     </>

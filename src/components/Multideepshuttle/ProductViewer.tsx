@@ -312,7 +312,7 @@ useEffect(() => {
               <button
                 aria-label="Scroll left"
                 onClick={() => mobileArrow('prev')}
-                className="mobile-scroll-button left absolute left-0 top-1/2 -translate-y-1/2 bg-[#cce7ed] max-[992px]:h-[65px] w-9 h-9 flex items-center justify-center z-20 hover:scale-105 transition"
+                className="mobile-scroll-button left absolute left-0 top-1/2 -translate-y-1/2 bg-[#cce7ed] max-[992px]:h-[50px] w-9 h-9 flex items-center justify-center z-20 hover:scale-105 transition"
               >
                 <svg viewBox="0 0 36 36" className="max-[992px]:h-[30px] max-[992px]:w-[30px] w-4 h-4 stroke-[#232323]" fill="none">
                   <path d="M20 25L14.5 19.5L20 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

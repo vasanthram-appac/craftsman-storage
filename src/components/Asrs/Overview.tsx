@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef, useState, useEffect } from "react";
 import Image from 'next/image';
 import { ASSET_PREFIX } from '../../../config';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Autoplay, Navigation } from "swiper/modules";
+import gsap from "gsap";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -100,9 +101,37 @@ const benefitsData: BenefitItem[] = [
 export default function Overview() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-
+    const swiperRef = useRef<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
   const paginationRef = useRef<HTMLDivElement | null>(null);
+    const [isEnd, setIsEnd] = useState(false);
+ // GSAP Fade + Scale + Blur Effect
+  const handleSlideTransition = () => {
+  if (!swiperRef.current) return;
+  const slides = swiperRef.current.slides;
 
+ slides.forEach((slide: HTMLElement, i: number) => {
+      if (i === swiperRef.current.activeIndex) {
+        // Incoming slide
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      } else {
+        // Outgoing slides
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 0.95,
+          filter: "blur(0)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+    });
+};
   return (
     <>
       <div className="w-[90%] max-w-[105rem] mx-auto">
@@ -112,7 +141,7 @@ export default function Overview() {
           </h2>
 
           {/* Header text */}
-          <div className="mb-[20px] md:mb-[40px] grid grid-cols-1 md:grid-cols-2 justify-between gap-[30px]">
+          <div className="mb-[20px] md:mb-[100px] grid grid-cols-1 md:grid-cols-2 justify-between gap-[30px]">
             <div>
               <h3 className="text-[24px] leading-[28px] sm:text-[26px] sm:leading-[30px] md:text-[30px] md:leading-[36px] lg:text-[36px] lg:leading-[40px] xl:text-[40px] xl:leading-[46px] 2xl:text-[46px] 2xl:leading-[50px] font-semibold tracking-[-0.4px] text-[#000]">
                 <span className="bg-gradient-to-r from-[#232323] to-[#0086A6] bg-clip-text text-transparent tracking-[-2px]">
@@ -121,7 +150,7 @@ export default function Overview() {
               </h3>
             </div>
             <div>
-              <p className="text-[#232323] text-[16px] sm:text-[18px] md:leading-[28px] 2xl:text-[20px] tracking-[-0.03em]">
+              <p className="text-[#232323] text-[16px] sm:text-[18px] leading-[24px] sm:leading-[26px] tracking-[-0.03em]">
                 is a high-tech, computer-controlled solution designed to automatically store and retrieve goods with speed and precision. Using equipment such as cranes, shuttles, conveyors, and vertical lifts, ASRS maximizes vertical space, reduces errors, improves safety, and cuts labor costs. It enables real-time inventory tracking, faster order fulfillment, and efficient use of warehouse space. Scalable and flexible, ASRS is widely used across industries like e-commerce, pharmaceuticals, cold storage, and manufacturing to optimize operations, boost productivity, and ensure accuracy in modern supply chains.
               </p>
             </div>
@@ -130,15 +159,27 @@ export default function Overview() {
       </div>
 
       {/* Swiper section */}
-      <div className="relative mt-[60px] pl-[3%]">
+      <div className="relative mt-[40px] sm:mt-[60px] pl-[3%]">
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          slidesPerView={1}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
-          }}
-          spaceBetween={20}
+          modules={[Autoplay, Navigation]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop
+            speed={800}
+            spaceBetween={30}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+         onSwiper={(swiper) => {
+  swiperRef.current = swiper;
+  handleSlideTransition(); // animate all on load
+  swiper.on("slideChange", () => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+    handleSlideTransition(); // animate all on slide change
+  });
+}}
+
           breakpoints={{
             0: { slidesPerView: 1.1, centeredSlides: true },
             480: { slidesPerView: 1.7, centeredSlides: false, spaceBetween: 20 },
@@ -146,7 +187,6 @@ export default function Overview() {
             992: { slidesPerView: 2.5, centeredSlides: false, spaceBetween: 20 },
             1500: { slidesPerView: 3.5, centeredSlides: false, spaceBetween: 30 },
           }}
-          loop={false}
           pagination={{ clickable: true, el: paginationRef.current }}
 
         >
@@ -158,18 +198,60 @@ export default function Overview() {
         </Swiper>
 
         {/* Navigation buttons */}
-        <div className="flex justify-end gap-3 mt-[20px] w-[70%] mx-auto">
-             <button ref={prevRef} className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]" >
-              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
-            </svg>
-          </button>
-          <button ref={nextRef} className="custom-next cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]" aria-label="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" className="text-[#323232]">
-              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6" />
-            </svg>
-          </button>
-        </div>
+        <div className="absolute bottom-[-45px] md:bottom-[-70px] w-auto right-[5%] md:right-auto md:w-[82%] mx-auto justify-end z-[50] flex gap-[10px]">
+            {/* Prev */}
+            <button
+              ref={prevRef}
+              disabled={isBeginning}
+              className={`custom-prev cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md transition-all duration-300 ${
+                isBeginning
+                  ? "bg-[#ccc] opacity-40 cursor-default"
+                  : "bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83]"
+              }`}
+              aria-label="Previous"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6"
+                />
+              </svg>
+            </button>
+
+            {/* Next */}
+            <button
+              ref={nextRef}
+              className="custom-next cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83] transition-all duration-300"
+              aria-label="Next"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"
+                />
+              </svg>
+            </button>
+          </div>
       </div>
     </>
   );
@@ -177,7 +259,7 @@ export default function Overview() {
 
 function BenefitCard({ title, description, image, href }: BenefitItem) {
   return (
-    <div className="group bg-[#fff] rounded-[15px] md:rounded-[25px]">
+    <div className="group bg-[#fff] rounded-[15px] md:rounded-[25px] border border-[#e1e1e1] hover:shadow-lg hover:shadow-orange-500/10 transition duration-300">
       <div className="mb-[25px] overflow-hidden flex rounded-[15px] md:rounded-[25px]">
         <Image
           src={image}

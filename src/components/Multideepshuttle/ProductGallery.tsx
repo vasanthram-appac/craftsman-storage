@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { ASSET_PREFIX } from "../../../config";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Autoplay, A11y } from "swiper/modules";
+import gsap from "gsap";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -53,7 +54,36 @@ export default function ProductGallery() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
+   const swiperRef = useRef<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+ // GSAP Fade + Scale + Blur Effect
+  const handleSlideTransition = () => {
+  if (!swiperRef.current) return;
+  const slides = swiperRef.current.slides;
 
+ slides.forEach((slide: HTMLElement, i: number) => {
+      if (i === swiperRef.current.activeIndex) {
+        // Incoming slide
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 1.02,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      } else {
+        // Outgoing slides
+        gsap.to(slide, {
+          opacity: 1,
+          scale: 0.90,
+          filter: "blur(0)",
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+    });
+};
   return (
     <>
       {/* Heading */}
@@ -69,50 +99,58 @@ export default function ProductGallery() {
 
         {/* Navigation buttons */}
         <div className="flex justify-end gap-3 mt-[20px] w-[70%] mr-[0] mx-auto">
-          <button
-            ref={prevRef}
-            className="custom-prev cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]"
-            aria-label="Previous"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              className="text-[#323232]"
+           {/* Prev */}
+            <button
+              ref={prevRef}
+              disabled={isBeginning}
+              className={`custom-prev cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md transition-all duration-300 ${
+                isBeginning
+                  ? "bg-[#ccc] opacity-40 cursor-default"
+                  : "bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83]"
+              }`}
+              aria-label="Previous"
             >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6"
-              />
-            </svg>
-          </button>
-          <button
-            ref={nextRef}
-            className="custom-next cursor-pointer p-[12px] hover:bg-[#fff] rounded-[15px]"
-            aria-label="Next"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              className="text-[#323232]"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6"
+                />
+              </svg>
+            </button>
+
+            {/* Next */}
+            <button
+              ref={nextRef}
+              className="custom-next cursor-pointer w-[40px] h-[40px] md:w-[50px] md:h-[50px] p-[8px] md:p-[12px] rounded-[50px] shadow-md bg-[#dbdbdb] hover:bg-[#dbdbdb] hover:text-[#006a83] transition-all duration-300"
+              aria-label="Next"
             >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                className="text-current"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"
+                />
+              </svg>
+            </button>
         </div>
 
 
@@ -120,14 +158,25 @@ export default function ProductGallery() {
 
       {/* Swiper section */}
       <div className="relative mt-[30px] sm:mt-[40px] md:mt-[60px]">
-        <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          slidesPerView={1}
-          spaceBetween={20}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
-          }}
+       <Swiper
+          modules={[Autoplay, Navigation]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            loop
+            speed={800}
+            spaceBetween={30}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+         onSwiper={(swiper) => {
+  swiperRef.current = swiper;
+  handleSlideTransition(); // animate all on load
+  swiper.on("slideChange", () => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+    handleSlideTransition(); // animate all on slide change
+  });
+}}
           pagination={{ clickable: true, el: paginationRef.current }}
           breakpoints={{
             0: { slidesPerView: 1, centeredSlides: true },
@@ -135,7 +184,6 @@ export default function ProductGallery() {
             992: { slidesPerView: 3, centeredSlides: false, spaceBetween: 20 },
             1500: { slidesPerView: 3, centeredSlides: false, spaceBetween: 30 },
           }}
-          loop={false}
         >
           {products.map((item) => (
             <SwiperSlide key={item.id}>
