@@ -9,22 +9,22 @@ export default function Address() {
     const locations = [
         {
             city: "Pune",
-            name: "CRAFTSMAN AUTOMATION   LIMITED – PUNE UNIT IV",
-            address: "GAT No. 58, Pimple Jagtap,\n Shirur Taluka – 412 208,\n Maharashtra, India.",
+            name: "CRAFTSMAN AUTOMATION   LIMITED - PUNE UNIT IV",
+            address: "GAT No. 58, Pimple Jagtap,\n Shirur Taluka - 412 208,\n Maharashtra, India.",
             email: "storage@craftsmanautomation.com",
             phone: "1800-313-03131",
         },
         {
             city: "Coimbatore",
-            name: "CRAFTSMAN AUTOMATION  LIMITED – UNIT III",
-            address: "123/4, Sangothipalayam Road, Arasur Post,\n Coimbatore – 641 407,\n Tamil Nadu, India.",
+            name: "CRAFTSMAN AUTOMATION  LIMITED - UNIT III",
+            address: "123/4, Sangothipalayam Road, Arasur Post,\n Coimbatore - 641 407,\n Tamil Nadu, India.",
             email: "storage@craftsmanautomation.com",
             phone: "1800-313-03131",
         },
         {
             city: "Chennai",
             name: "CRAFTSMAN AUTOMATION LIMITED",
-            address: "Temple Steps, First Floor, Block 1,\n Unit 1, Door No. 184-187,\n Little Mount, Chennai – 600 015,\n Tamil Nadu, India.",
+            address: "Temple Steps, First Floor, Block 1,\n Unit 1, Door No. 184-187,\n Little Mount, Chennai - 600 015,\n Tamil Nadu, India.",
             email: "storage@craftsmanautomation.com",
             phone: "1800-313-03131",
         },
@@ -45,7 +45,7 @@ export default function Address() {
         {
             city: "Chennai",
             name: "CRAFTSMAN AUTOMATION LIMITED",
-            address: "Temple Steps, First Floor, Block 1,\n Unit 1, Door No. 184-187,\n Little Mount, Chennai – 600 015,\n Tamil Nadu, India.",
+            address: "Temple Steps, First Floor, Block 1,\n Unit 1, Door No. 184-187,\n Little Mount, Chennai - 600 015,\n Tamil Nadu, India.",
             email: "storage@craftsmanautomation.com",
             phone: "1800-313-03131",
         },

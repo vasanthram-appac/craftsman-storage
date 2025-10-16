@@ -15,40 +15,40 @@ import { ASSET_PREFIX } from "../../../config";
 const events = [
   {
     id: 1,
-    date: "Jul 27",
-    title: "Craftsman Storage Exhibited at IWS Expo 2025",
-    img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
+    date: "Sep 19",
+    title: "Craftsman Hosted Rishta Customer Meet in Ahmedabad",
+    img: `${ASSET_PREFIX}/images/news/craftsman-hosted-rishta-customer-meet-in-ahmedabad-main.webp`,
+    link: "/craftsman-hosted-rishta-customer-meet-in-ahmedabad"
   },
   {
     id: 2,
-    date: "Jul 27",
-    title: "Craftsman Storage Supported Nestle's New Logistics Centre in Chennai",
-    img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
+    date: "Sep 17",
+    title: "Craftsman Hosts Rishta Customer Meet in Bangalore",
+    img: `${ASSET_PREFIX}/images/news/craftsman-hosts-rishta-customer-meet-in-bangalore-main.webp`,
+     link: "/craftsman-hosts-rishta-customer-meet-in-bangalore"
   },
   {
     id: 3,
-    date: "Jul 27",
-    title: "Craftsman Storage Exhibited at IWS Expo 2025",
-    img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
+    date: "Sep 12",
+    title: "CII Institute of Logistics STAR 2025",
+    img: `${ASSET_PREFIX}/images/news/cii-institute-of-logistics-star-main-2025.webp`,
+     link: "/craftsman-storage-was-delighted-to-be-part-of-the-cii-institute-of-logistics-star-2025-summit-in-mumbai"
   },
   {
     id: 4,
     date: "Jul 27",
     title: "Craftsman Storage Exhibited at IWS Expo 2025",
     img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
+     link: ""
   },
   {
     id: 5,
     date: "Jul 27",
     title: "Craftsman Storage Supported Nestle's New Logistics Centre in Chennai",
     img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
+     link: ""
   },
-  {
-    id: 6,
-    date: "Jul 27",
-    title: "Craftsman Storage Exhibited at IWS Expo 2025",
-    img: `${ASSET_PREFIX}/images/news-events-placeholder.jpg`,
-  },
+ 
   // add more slides here
 ];
 
@@ -91,8 +91,10 @@ export default function RecentEvents() {
           spaceBetween={20}
   breakpoints={{
     0: { slidesPerView: 1 },
-    767: { slidesPerView: 2 },
-    1500: { slidesPerView: 2 },
+    720: { slidesPerView: 2 },
+    1200: { slidesPerView: 2 },
+
+    1500: { slidesPerView: 3 },
   }}
    autoplay={{
     delay: 3000, // 3 seconds between slides
@@ -128,7 +130,7 @@ export default function RecentEvents() {
                 />
                 <div className="absolute bottom-0 left-0">
                   <Link
-                    href="#"
+                    href={ev.link}
                     className="bg-white text-[#FF8400] text-[16px] px-[15px] py-[8px] rounded-tr-[15px]"
                   >
                     Know More

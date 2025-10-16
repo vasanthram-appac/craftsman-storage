@@ -215,7 +215,7 @@ function CaseStudyCard({ item }: { item: CaseStudyItem }) {
         {item.title}
       </h4>
       <p className="text-[#616161]">
-        <span className="font-[600] uppercase">{item.author}</span> – {item.industry}
+        <span className="font-[600] uppercase">{item.author}</span> - {item.industry}
       </p>
     </div>
   );

@@ -88,8 +88,7 @@ export default function Subbanner({ bannerKey }: SubbannerProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.8 }}
-          >
+            transition={{ duration: 0.8 }}>
             <h1 className="text-[28px] sm:text-[34px] md:text-[42px] xl:text-[48px] font-semibold leading-[34px] sm:leading-[40px] md:leading-[48px] xl:leading-[50px] mb-[15px]">
               {banner.subtitle}
             </h1>
@@ -119,16 +118,17 @@ function BannerLink({
 }) {
   return (
     <Link
-  href={href}
-  className="inline-flex items-center gap-[5px] text-[16px] font-normal hover:opacity-80 transition group overflow-hidden rounded-full"
->
-  <div className="relative p-[12.5px] rounded-full flex items-center justify-center
+      href={href}
+      className="inline-flex items-center gap-[5px] text-[16px] font-normal hover:opacity-80 transition group overflow-hidden rounded-full">
+      <div
+        className="relative p-[12.5px] rounded-full flex items-center justify-center
                   before:content-[''] before:absolute before:left-0 before:top-0 before:w-[40px] before:h-[40px] before:bg-black before:rounded-full before:transition-transform before:duration-500 before:ease-in-out group-hover:before:scale-[6.25]">
-    <ArrowIcon />
-  </div>
-  <span className="relative z-[99] opacity-80 group-hover:opacity-100 group-hover:scale-[1] transition duration-300 ease-in-out pr-[15px] ">{children}</span>
-</Link>
-
+        <ArrowIcon />
+      </div>
+      <span className="relative z-[99] opacity-80 group-hover:opacity-100 group-hover:scale-[1] transition duration-300 ease-in-out pr-[15px] ">
+        {children}
+      </span>
+    </Link>
   );
 }
 
@@ -140,8 +140,7 @@ function ArrowIcon() {
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="relative z-[999] "
-    >
+      className="relative z-[999] ">
       <path
         d="M15.435 1.56497C15.435 1.01269 14.9873 0.564971 14.435 0.564971L5.43503 0.564972C4.88274 0.564971 4.43503 1.01269 4.43503 1.56497C4.43503 2.11726 4.88274 2.56497 5.43503 2.56497L13.435 2.56497L13.435 10.565C13.435 11.1173 13.8827 11.565 14.435 11.565C14.9873 11.565 15.435 11.1173 15.435 10.565L15.435 1.56497ZM1 15L1.70711 15.7071L15.1421 2.27208L14.435 1.56497L13.7279 0.857865L0.292893 14.2929L1 15Z"
         fill="#fff"

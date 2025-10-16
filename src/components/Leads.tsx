@@ -31,7 +31,7 @@ export default function Leads() {
                 <h4 className="text-[#fff] mb-[15px] font-extralight">For Enquiry</h4>
                 <p className="mb-[30px] xl:mb-[50px]"><Link href="mailto:Storage@carftsmensoultions.com" className="text-[#fff] font-light text-[18px] leading-[26px]">Storage@craftsmansolutions.com</Link></p>
                 <h5 className="text-[#fff] text-[18px] leading-[26px] mb-[15px] font-extralight tracking-[0.02em]"><span className="font-normal">CRAFTSMAN AUTOMATION <br /> LIMITED</span> - UNIT III</h5>
-                <p className="text-[#fff] font-extralight">123/4, Sangothipalayam Road, <br />Arasur Post, <span className="text-nowrap">Coimbatore – 641 407,</span><br /> Tamil Nadu, India.</p>
+                <p className="text-[#fff] font-extralight">123/4, Sangothipalayam Road, <br />Arasur Post, <span className="text-nowrap">Coimbatore - 641 407,</span><br /> Tamil Nadu, India.</p>
             </div>
             </div>
         </div>
