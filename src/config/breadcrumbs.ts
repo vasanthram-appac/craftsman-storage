@@ -63,6 +63,21 @@ export const breadcrumbsConfig: Record<string, BreadcrumbItem[]> = {
     { title: "Case Studies", href: "/" },
     { title: "Ecommerce", href: "/" },
   ],
+  "ecommerce-solutions": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Ecommerce Solutions", href: "/" },
+  ],
+  "textile-industry": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Textile Industry", href: "/" },
+  ],
+  "textile-fashion": [
+    { title: "Home", href: "/" },
+    { title: "Case Studies", href: "/" },
+    { title: "Textile Fashion", href: "/" },
+  ],
   "craftsman-hosted-rishta-customer-meet-in-ahmedabad": [
     { title: "Home", href: "/" },
     { title: "News and Events", href: "/news-events" },
